@@ -1,0 +1,42 @@
+&pinctrl {
+	adc3_in0_pc2: adc3_in0_pc2 { pinmux = <STM32_PINMUX('C', 2, ANALOG)>; };
+	adc3_in1_pc3: adc3_in1_pc3 { pinmux = <STM32_PINMUX('C', 3, ANALOG)>; };
+	adc3_in2_pf9: adc3_in2_pf9 { pinmux = <STM32_PINMUX('F', 9, ANALOG)>; };
+	adc3_in3_pf7: adc3_in3_pf7 { pinmux = <STM32_PINMUX('F', 7, ANALOG)>; };
+	adc3_in4_pf5: adc3_in4_pf5 { pinmux = <STM32_PINMUX('F', 5, ANALOG)>; };
+	adc3_in5_pf3: adc3_in5_pf3 { pinmux = <STM32_PINMUX('F', 3, ANALOG)>; };
+	adc3_in6_pf10: adc3_in6_pf10 { pinmux = <STM32_PINMUX('F', 10, ANALOG)>; };
+	adc3_in7_pf8: adc3_in7_pf8 { pinmux = <STM32_PINMUX('F', 8, ANALOG)>; };
+};
+
+&adc3 {
+	pinctrl-0 = <&adc3_in0_pc2 &adc3_in1_pc3 &adc3_in2_pf9 &adc3_in3_pf7 
+	             &adc3_in4_pf5 &adc3_in5_pf3 &adc3_in6_pf10 &adc3_in7_pf8>;
+	pinctrl-names = "default";
+	status = "okay";
+};
+
+#include <dt-bindings/dac/dacx0508.h>
+
+&spi1 {
+	status = "okay";
+	pinctrl-0 = <&spi1_sck_pa5 &spi1_miso_pa6 &spi1_mosi_pb5>;
+	pinctrl-names = "default";
+	cs-gpios = <&gpioa 4 GPIO_ACTIVE_LOW>;
+
+	dac0: dac80508@0 {
+		compatible = "ti,dac80508";
+		reg = <0>;
+		spi-max-frequency = <50000000>;
+		#io-channel-cells = <1>;
+		voltage-reference = <DACX0508_REF_EXTERNAL_1_2>;
+		channel0-gain = <DACX0508_CHANNEL_GAIN_2>;
+		channel1-gain = <DACX0508_CHANNEL_GAIN_2>;
+		channel2-gain = <DACX0508_CHANNEL_GAIN_2>;
+		channel3-gain = <DACX0508_CHANNEL_GAIN_2>;
+		channel4-gain = <DACX0508_CHANNEL_GAIN_2>;
+		channel5-gain = <DACX0508_CHANNEL_GAIN_2>;
+		channel6-gain = <DACX0508_CHANNEL_GAIN_2>;
+		channel7-gain = <DACX0508_CHANNEL_GAIN_2>;
+	};
+};
