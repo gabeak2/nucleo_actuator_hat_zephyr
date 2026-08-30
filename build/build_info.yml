@@ -1,0 +1,62 @@
+cmake:
+  application:
+    configuration-dir: '/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr'
+    source-dir: '/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr'
+  board:
+    name: 'nucleo_h753zi'
+    path:
+     - '/Users/gabe/zephyrproject/zephyr/boards/st/nucleo_h753zi'
+    qualifiers: 'stm32h753xx'
+    revision: ''
+  devicetree:
+    bindings-dirs:
+     - '/Users/gabe/zephyrproject/zephyr/dts/bindings'
+    files:
+     - '/Users/gabe/zephyrproject/zephyr/boards/st/nucleo_h753zi/nucleo_h753zi.dts'
+     - '/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/boards/nucleo_h753zi.overlay'
+    include-dirs:
+     - '/Users/gabe/zephyrproject/modules/hal/ambiq/dts'
+     - '/Users/gabe/zephyrproject/modules/hal/atmel/include'
+     - '/Users/gabe/zephyrproject/modules/hal/bouffalolab/include'
+     - '/Users/gabe/zephyrproject/modules/hal/bouffalolab/include/zephyr'
+     - '/Users/gabe/zephyrproject/modules/hal/gigadevice/include'
+     - '/Users/gabe/zephyrproject/modules/hal/infineon/dts'
+     - '/Users/gabe/zephyrproject/modules/hal/microchip/include'
+     - '/Users/gabe/zephyrproject/modules/hal/microchip/dts'
+     - '/Users/gabe/zephyrproject/modules/hal/nuvoton/dts'
+     - '/Users/gabe/zephyrproject/modules/hal/nxp/dts'
+     - '/Users/gabe/zephyrproject/modules/hal/stm32/dts'
+     - '/Users/gabe/zephyrproject/modules/hal/ti/dts'
+     - '/Users/gabe/zephyrproject/zephyr/include'
+     - '/Users/gabe/zephyrproject/zephyr/include/zephyr'
+     - '/Users/gabe/zephyrproject/zephyr/dts/common'
+     - '/Users/gabe/zephyrproject/zephyr/dts/vendor'
+     - '/Users/gabe/zephyrproject/zephyr/dts/rx'
+     - '/Users/gabe/zephyrproject/zephyr/dts/x86'
+     - '/Users/gabe/zephyrproject/zephyr/dts/xtensa'
+     - '/Users/gabe/zephyrproject/zephyr/dts/sparc'
+     - '/Users/gabe/zephyrproject/zephyr/dts/riscv'
+     - '/Users/gabe/zephyrproject/zephyr/dts/posix'
+     - '/Users/gabe/zephyrproject/zephyr/dts/arm64'
+     - '/Users/gabe/zephyrproject/zephyr/dts/arm'
+     - '/Users/gabe/zephyrproject/zephyr/dts/arc'
+     - '/Users/gabe/zephyrproject/zephyr/dts'
+    user-files:
+     - '/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/boards/nucleo_h753zi.overlay'
+  kconfig:
+    files:
+     - '/Users/gabe/zephyrproject/zephyr/boards/st/nucleo_h753zi/nucleo_h753zi_defconfig'
+     - '/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/prj.conf'
+    user-files:
+     - '/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/prj.conf'
+  toolchain:
+    name: 'zephyr'
+    path: '/Users/gabe/zephyr-sdk-1.0.1'
+  zephyr:
+    version: '4.4.99'
+    zephyr-base: '/Users/gabe/zephyrproject/zephyr'
+version: '0.1.0'
+west:
+  command: '/Users/gabe/zephyrproject/.venv/bin/west build -b nucleo_h753zi .'
+  topdir: '/Users/gabe/zephyrproject'
+  version: '1.5.0'

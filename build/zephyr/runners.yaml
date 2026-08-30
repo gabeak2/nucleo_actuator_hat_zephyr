@@ -1,0 +1,44 @@
+# Available runners configured by board.cmake.
+runners:
+- stm32cubeprogrammer
+- openocd
+- pyocd
+- jlink
+
+# Default flash runner if --runner is not given.
+flash-runner: stm32cubeprogrammer
+
+# Default debug runner if --runner is not given.
+debug-runner: openocd
+
+# Common runner configuration values.
+config:
+  board_dir: /Users/gabe/zephyrproject/zephyr/boards/st/nucleo_h753zi
+  # Build outputs:
+  elf_file: zephyr.elf
+  hex_file: zephyr.hex
+  bin_file: zephyr.bin
+  # Host tools:
+  gdb: /Users/gabe/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/arm-zephyr-eabi-gdb
+  openocd: /Users/gabe/zephyr-sdk-1.0.1/hosttools/usr/bin/openocd
+  openocd_search:
+    - /Users/gabe/zephyr-sdk-1.0.1/hosttools/opt/openocd/share/openocd/scripts
+
+# Runner specific arguments
+args:
+  stm32cubeprogrammer:
+    - --port=swd
+    - --reset-mode=hw
+  openocd:
+    - --cmd-load
+    - flash write_image erase
+    - --cmd-verify
+    - verify_image
+    - --target-handle=_CHIPNAME.cpu0
+  pyocd:
+    - --dt-flash=y
+    - --target=stm32h753zitx
+  jlink:
+    - --dt-flash=y
+    - --device=STM32H753ZI
+    - --speed=4000

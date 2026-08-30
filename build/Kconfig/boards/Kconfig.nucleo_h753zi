@@ -1,0 +1,2 @@
+# Load board Kconfig descriptions.
+osource "/Users/gabe/zephyrproject/zephyr/boards/st/nucleo_h753zi/Kconfig.nucleo_h753zi"

@@ -1,3 +1,5 @@
+#include <math.h>
+#include <soc.h>
 #include <stdlib.h>
 #include <zephyr/device.h>
 #include <zephyr/devicetree.h>
@@ -152,7 +154,8 @@ static int cmd_dac_status(const struct shell *sh, size_t argc, char **argv) {
       shell_error(sh, "ADC read failed (err %d)", ret);
       return ret;
     }
-    shell_print(sh, "DAC Channel %d: Current readback = %.2f mA", ch, cur);
+    shell_print(sh, "DAC Channel %d: Current readback = %.2f mA", ch,
+                (double)cur);
   } else {
     shell_print(sh, "--- Actuator Status (Current Readback) ---");
     for (int i = 0; i < 8; i++) {
@@ -160,7 +163,7 @@ static int cmd_dac_status(const struct shell *sh, size_t argc, char **argv) {
       if (ret < 0) {
         shell_print(sh, "CH %d: Error reading", i);
       } else {
-        shell_print(sh, "CH %d: %.2f mA", i, cur);
+        shell_print(sh, "CH %d: %.2f mA", i, (double)cur);
       }
     }
   }
@@ -249,11 +252,499 @@ static int cmd_dac_test_sweep(const struct shell *sh, size_t argc,
   return 0;
 }
 
+#ifndef M_PI
+#define M_PI 3.14159265358979323846f
+#endif
+
+/* Helper to convert mA to DAC value (clamped) */
+static inline uint32_t current_ma_to_dac_value(float current_ma) {
+  float v_mv = 1500.0f + (current_ma * 10.0f);
+  if (v_mv < 0.0f) {
+    v_mv = 0.0f;
+  } else if (v_mv > 3000.0f) {
+    v_mv = 3000.0f;
+  }
+  return (uint32_t)((v_mv / 3000.0f) * 65535.0f);
+}
+
+/* Helper for single ADC conversion (driver path, used only to force
+ * calibration / clocking of ADC3 during boot sanity checks if ever needed) */
+static inline int read_single_adc_raw(uint8_t adc_ch, int16_t *sample) {
+  struct adc_sequence sequence = {
+      .channels = BIT(adc_ch),
+      .buffer = sample,
+      .buffer_size = sizeof(*sample),
+      .resolution = ADC_RESOLUTION,
+  };
+  return adc_read(adc_dev, &sequence);
+}
+
+#include <stm32h7xx_ll_adc.h>
+#include <stm32h7xx_ll_gpio.h>
+#include <stm32h7xx_ll_spi.h>
+
+#include <zephyr/drivers/spi.h>
+
+#include <stm32_ll_bus.h>
+#include <stm32_ll_gpio.h>
+
+/* ===================== SPI (DAC) fast path ===================== */
+
+/* Prepare SPI hardware ONCE before bare-metal fast-path loop. */
+static inline void dac_spi_begin(void) {
+  LL_APB2_GRP1_EnableClock(LL_APB2_GRP1_PERIPH_SPI1);
+
+  if (LL_SPI_IsEnabled(SPI1)) {
+    LL_SPI_SuspendMasterTransfer(SPI1);
+    uint32_t to = 5000;
+    while (!(READ_BIT(SPI1->SR, SPI_SR_SUSP)) && --to)
+      ;
+    LL_SPI_Disable(SPI1);
+    to = 5000;
+    while (LL_SPI_IsEnabled(SPI1) && --to)
+      ;
+  }
+
+  SPI1->IFCR = 0xFFFFFFFFUL;
+
+  /* Drain and clear any stale RX/OVR state left over from a previous
+   * command before we start driving the bus again. */
+  if (LL_SPI_IsActiveFlag_OVR(SPI1)) {
+    (void)LL_SPI_ReceiveData8(SPI1);
+    LL_SPI_ClearFlag_OVR(SPI1);
+  }
+
+  LL_SPI_SetTransferSize(SPI1, 3U);
+  LL_SPI_Enable(SPI1);
+}
+
+/* Hot path: CS + transmit 3 bytes + wait EOT + drain RX + clear flags + CS.
+ * SPI stays enabled during the entire sweep, zero setup/teardown overhead. */
+static inline void dac_write_fast(uint8_t dac_ch, uint16_t dac_val) {
+  uint8_t b0 = 0x08 + dac_ch;
+  uint8_t b1 = (uint8_t)(dac_val >> 8);
+  uint8_t b2 = (uint8_t)(dac_val & 0xFF);
+
+  /* Defensive: if a prior call overran (see note below) and somehow left
+   * OVR set, clear it now so this transfer isn't affected. */
+  if (LL_SPI_IsActiveFlag_OVR(SPI1)) {
+    (void)LL_SPI_ReceiveData8(SPI1);
+    LL_SPI_ClearFlag_OVR(SPI1);
+  }
+
+  LL_GPIO_ResetOutputPin(GPIOA, LL_GPIO_PIN_4);
+
+  LL_SPI_TransmitData8(SPI1, b0);
+  LL_SPI_TransmitData8(SPI1, b1);
+  LL_SPI_TransmitData8(SPI1, b2);
+
+  LL_SPI_StartMasterTransfer(SPI1);
+
+  uint32_t to = 20000;
+  while (!LL_SPI_IsActiveFlag_EOT(SPI1) && --to) {
+    /* spin */
+  }
+
+  /* CRITICAL: this bus is full-duplex (MISO is wired per the devicetree),
+   * so every TX byte clocks in a corresponding RX byte whether we want it
+   * or not. If we never read RXDR, the RX FIFO fills after roughly 4-5
+   * calls and the peripheral raises OVR, which silently blocks all
+   * subsequent transfers -- this was the root cause of "first value
+   * works, then nothing toggles". Always drain RX after every transfer. */
+  while (LL_SPI_IsActiveFlag_RXP(SPI1)) {
+    (void)LL_SPI_ReceiveData8(SPI1);
+  }
+
+  LL_SPI_ClearFlag_EOT(SPI1);
+  LL_SPI_ClearFlag_TXTF(SPI1);
+  if (LL_SPI_IsActiveFlag_OVR(SPI1)) {
+    LL_SPI_ClearFlag_OVR(SPI1);
+  }
+
+  LL_GPIO_SetOutputPin(GPIOA, LL_GPIO_PIN_4);
+}
+
+/* Clean up SPI hardware after bare-metal sweep completes. */
+static inline void dac_spi_end(void) {
+  if (LL_SPI_IsEnabled(SPI1)) {
+    LL_SPI_Disable(SPI1);
+    uint32_t to = 5000;
+    while (LL_SPI_IsEnabled(SPI1) && --to)
+      ;
+  }
+}
+
+/* ===================== ADC3 (current sense) fast path ===================== */
+
+/* Maps raw STM32 ADC input number (0-7, matching dac_to_adc_map values) to
+ * the LL_ADC_CHANNEL_x macro LL expects. Extend if you ever use channels
+ * beyond IN7. */
+static const uint32_t ll_adc_channel_lut[8] = {
+    LL_ADC_CHANNEL_0, LL_ADC_CHANNEL_1, LL_ADC_CHANNEL_2, LL_ADC_CHANNEL_3,
+    LL_ADC_CHANNEL_4, LL_ADC_CHANNEL_5, LL_ADC_CHANNEL_6, LL_ADC_CHANNEL_7,
+};
+
+static void adc3_prepare_channel(uint8_t adc_ch) {
+  __ASSERT_NO_MSG(adc_ch < 8);
+
+  /* Enable internal voltage regulator if not enabled and wait for stabilization
+   */
+  if (!(ADC3->CR & ADC_CR_ADVREGEN)) {
+    ADC3->CR |= ADC_CR_ADVREGEN;
+  }
+  k_busy_wait(50); /* 50 us startup delay for ADVREGEN */
+
+  /* Pre-select the ADC channel pin in PCSEL register (CRITICAL on STM32H7!) */
+  ADC3->PCSEL |= BIT(adc_ch);
+
+  /* Make sure ADC3 is disabled before reconfiguring calibration/sequencer */
+  if (LL_ADC_IsEnabled(ADC3)) {
+    LL_ADC_REG_StopConversion(ADC3);
+    uint32_t to = 100000;
+    while (LL_ADC_REG_IsStopConversionOngoing(ADC3) && --to)
+      ;
+    LL_ADC_Disable(ADC3);
+    to = 100000;
+    while (LL_ADC_IsEnabled(ADC3) && --to)
+      ;
+  }
+
+  /* Calibrate ADC3 with generous timeout (~100 ms) */
+  LL_ADC_StartCalibration(ADC3, LL_ADC_CALIB_OFFSET_LINEARITY,
+                          LL_ADC_SINGLE_ENDED);
+  uint32_t to = 5000000;
+  while (LL_ADC_IsCalibrationOnGoing(ADC3) && --to)
+    ;
+  if (to == 0) {
+    printk("ADC ERROR: Calibration timed out!\n");
+  }
+
+  /* Regular sequencer: single conversion, rank 1 = our channel. */
+  LL_ADC_REG_SetSequencerLength(ADC3, LL_ADC_REG_SEQ_SCAN_DISABLE);
+  LL_ADC_REG_SetSequencerRanks(ADC3, LL_ADC_REG_RANK_1,
+                               ll_adc_channel_lut[adc_ch]);
+  LL_ADC_REG_SetTriggerSource(ADC3, LL_ADC_REG_TRIG_SOFTWARE);
+
+  /* Give the channel a real sampling time -- long enough for the current
+   * sense signal to settle, short enough to not eat the whole budget. */
+  LL_ADC_SetChannelSamplingTime(ADC3, ll_adc_channel_lut[adc_ch],
+                                LL_ADC_SAMPLINGTIME_8CYCLES_5);
+
+  /* Force plain DR (no DMA) transfer mode directly via CFGR */
+  MODIFY_REG(ADC3->CFGR, ADC_CFGR_DMNGT, 0);
+
+  /* Enable and wait for ADC ready. */
+  LL_ADC_ClearFlag_ADRDY(ADC3);
+  LL_ADC_Enable(ADC3);
+  to = 5000000;
+  while (!LL_ADC_IsActiveFlag_ADRDY(ADC3) && --to)
+    ;
+  if (to == 0) {
+    printk("ADC ERROR: ADRDY timed out!\n");
+  }
+  LL_ADC_ClearFlag_ADRDY(ADC3);
+}
+
+static inline void adc3_shutdown(void) {
+  if (LL_ADC_IsEnabled(ADC3)) {
+    LL_ADC_REG_StopConversion(ADC3);
+    uint32_t to = 5000;
+    while (LL_ADC_REG_IsStopConversionOngoing(ADC3) && --to)
+      ;
+    LL_ADC_Disable(ADC3);
+  }
+}
+
+/* Direct Fast-Path ADC3 read. Assumes adc3_prepare_channel() has already
+ * enabled the ADC and selected the channel. */
+static inline uint16_t adc_read_fast(void) {
+  LL_ADC_ClearFlag_EOC(ADC3);
+  LL_ADC_REG_StartConversion(ADC3);
+  uint32_t to = 20000;
+  while (!LL_ADC_IsActiveFlag_EOC(ADC3) && --to)
+    ;
+  return (uint16_t)LL_ADC_REG_ReadConversionData12(ADC3);
+}
+
+/* Run Lock-In FRA measurement for a single frequency */
+static int run_fra_single_freq(uint8_t dac_ch, uint8_t adc_ch, float dc_ma,
+                               float amp_ma, float freq_hz, float *gain_db,
+                               float *phase_deg) {
+  /* Determine points per cycle P (32 for <= 2kHz, 16 for > 2kHz up to 10kHz) */
+  int P = 32;
+  if (freq_hz > 2000.0f) {
+    P = 16;
+  }
+
+  /* 10 settling cycles and 100 measurement cycles per frequency */
+  int n_settle = 10;
+  int n_meas = 100;
+
+  /* Pre-compute 1-cycle DAC values and sin/cos reference tables */
+  uint16_t dac_lut[32];
+  float sin_lut[32];
+  float cos_lut[32];
+
+  for (int p = 0; p < P; p++) {
+    float theta = (2.0f * (float)M_PI * (float)p) / (float)P;
+    sin_lut[p] = sinf(theta);
+    cos_lut[p] = cosf(theta);
+    float i_val = dc_ma + amp_ma * sin_lut[p];
+    dac_lut[p] = (uint16_t)current_ma_to_dac_value(i_val);
+  }
+
+  uint32_t dt_cycles =
+      (uint32_t)(sys_clock_hw_cycles_per_sec() / (freq_hz * (float)P));
+  if (dt_cycles == 0) {
+    dt_cycles = 1;
+  }
+
+  int total_samples = (n_settle + n_meas) * P;
+  int meas_start_sample = n_settle * P;
+  int total_meas_samples = n_meas * P;
+
+  double sum_i = 0.0;
+  double sum_q = 0.0;
+  uint32_t overrun_count = 0;
+  uint16_t min_adc = 65535, max_adc = 0;
+
+  /* Enable ARM Cortex-M7 DWT Hardware Cycle Counter (480MHz continuous
+   * UP-counter) */
+  CoreDebug->DEMCR |= CoreDebug_DEMCR_TRCENA_Msk;
+  DWT->CTRL |= DWT_CTRL_CYCCNTENA_Msk;
+
+  uint32_t start_cycle = DWT->CYCCNT;
+
+  for (int step = 0; step < total_samples; step++) {
+    int p = step % P;
+
+    /* Fast Direct DAC write over 50MHz SPI (~0.8 us) */
+    dac_write_fast(dac_ch, dac_lut[p]);
+
+    /* Short 1us settling delay for DAC & analog circuitry before sampling ADC
+     */
+    uint32_t settle_offset = (dt_cycles > 1920) ? 480 : (dt_cycles / 4);
+    uint32_t sample_cycle =
+        start_cycle + (uint32_t)(((uint64_t)step * dt_cycles) + settle_offset);
+    while ((int32_t)(DWT->CYCCNT - sample_cycle) < 0) {
+      /* Spin-wait */
+    }
+
+    /* Fast Direct ADC conversion (~0.3 us) */
+    uint16_t raw_sample = adc_read_fast();
+
+    if (raw_sample < min_adc)
+      min_adc = raw_sample;
+    if (raw_sample > max_adc)
+      max_adc = raw_sample;
+
+    bool is_meas = (step >= meas_start_sample);
+
+    if (is_meas) {
+      float v_mv = ((float)raw_sample * 3300.0f) / ((1 << ADC_RESOLUTION) - 1);
+      float i_meas = (v_mv - 1500.0f) / 10.0f;
+      sum_i += (double)(i_meas * sin_lut[p]);
+      sum_q += (double)(i_meas * cos_lut[p]);
+    }
+
+    /* Absolute timestamp for next sample step */
+    uint32_t target_cycle =
+        start_cycle + (uint32_t)(((uint64_t)(step + 1) * dt_cycles));
+    if (DWT->CYCCNT > target_cycle &&
+        (DWT->CYCCNT - target_cycle) < 0x7FFFFFFFUL) {
+      overrun_count++;
+    }
+    while ((DWT->CYCCNT < target_cycle) &&
+           (target_cycle - DWT->CYCCNT) < 0x7FFFFFFFUL) {
+      /* Spin-wait for sub-microsecond precision */
+    }
+  }
+
+  if (overrun_count > 0) {
+    printk("FRA %.1f Hz: %u timing overruns!\n", (double)freq_hz,
+           overrun_count);
+  }
+  //   printk("ADC DEBUG: min=%u max=%u sum_i=%.2f sum_q=%.2f\n", min_adc,
+  //   max_adc,
+  //  sum_i, sum_q);
+
+  /* Compute In-phase (I) and Quadrature (Q) components */
+  double I = (2.0 * sum_i) / (double)total_meas_samples;
+  double Q = (2.0 * sum_q) / (double)total_meas_samples;
+
+  double measured_amp = sqrt(I * I + Q * Q);
+  if (measured_amp < 1e-9) {
+    measured_amp = 1e-9;
+  }
+
+  *gain_db = (float)(20.0 * log10(measured_amp / (double)amp_ma));
+  *phase_deg = (float)(atan2(Q, I) * (180.0 / (double)M_PI));
+
+  return 0;
+}
+
+/* Shell Command: dac test fra <channel> <dc_ma> <amp_ma> <f_start_hz>
+ * <f_stop_hz> <ppd> */
+static int cmd_dac_test_fra(const struct shell *sh, size_t argc, char **argv) {
+  uint32_t channel = strtoul(argv[1], NULL, 10);
+  float dc_ma = strtof(argv[2], NULL);
+  float amp_ma = strtof(argv[3], NULL);
+  float f_start = strtof(argv[4], NULL);
+  float f_stop = strtof(argv[5], NULL);
+  float ppd = strtof(argv[6], NULL);
+
+  if (channel > 7) {
+    shell_error(sh, "Invalid channel: 0-7 allowed");
+    return -EINVAL;
+  }
+
+  if (amp_ma <= 0.0f) {
+    shell_error(sh, "Amplitude must be > 0 mA");
+    return -EINVAL;
+  }
+
+  if (f_start <= 0.0f || f_stop < f_start) {
+    shell_error(sh, "Invalid frequency range");
+    return -EINVAL;
+  }
+
+  if (ppd <= 0.0f) {
+    shell_error(sh, "Points per decade must be > 0");
+    return -EINVAL;
+  }
+
+  uint8_t adc_ch = dac_to_adc_map[channel];
+
+  shell_print(sh,
+              "Starting FRA Sweep on CH %d: DC=%.2fmA, Amp=%.2fmA, "
+              "%.1fHz-%.1fHz, PPD=%.1f",
+              channel, (double)dc_ma, (double)amp_ma, (double)f_start,
+              (double)f_stop, (double)ppd);
+  shell_print(sh, "freq_hz,gain_db,phase_deg");
+
+  /* Prime DAC via OS driver ONCE so GPIO alt-function/clocks are set up
+   * before we take over SPI1 with the bare-metal fast path. */
+  dac_write_value(dac_dev, channel, current_ma_to_dac_value(dc_ma));
+
+  /* Prepare SPI peripheral ONCE for the entire sweep */
+  dac_spi_begin();
+
+  /* Prepare ADC3 ONCE for the entire sweep: calibrate, select the correct
+   * regular channel, and enable. This is the piece that was missing before
+   * -- without it ADC3 stays disabled and every fast read times out. */
+  adc3_prepare_channel(adc_ch);
+
+  float log_start = log10f(f_start);
+  float log_stop = log10f(f_stop);
+  float log_step = 1.0f / ppd;
+
+  for (float log_f = log_start; log_f <= log_stop + 1e-4f; log_f += log_step) {
+    float f = powf(10.0f, log_f);
+    if (f > f_stop) {
+      f = f_stop;
+    }
+
+    float gain_db = 0.0f;
+    float phase_deg = 0.0f;
+
+    int ret = run_fra_single_freq((uint8_t)channel, adc_ch, dc_ma, amp_ma, f,
+                                  &gain_db, &phase_deg);
+    if (ret < 0) {
+      shell_error(sh, "FRA measurement error at %.2f Hz (err %d)", (double)f,
+                  ret);
+      break;
+    }
+
+    shell_print(sh, "%.2f,%.3f,%.2f", (double)f, (double)gain_db,
+                (double)phase_deg);
+  }
+
+  /* Restore DAC channel back to baseline DC value */
+  dac_write_fast(channel, (uint16_t)current_ma_to_dac_value(dc_ma));
+  dac_spi_end();
+  adc3_shutdown();
+
+  return 0;
+}
+
+/* Shell Command: dac test fastwrite <ch> <val_low> <val_high>
+ * Alternates bare-metal dac_write_fast between two raw 16-bit values every
+ * second. Use this to verify the fast SPI path actually updates the DAC output.
+ * Press any key to stop. */
+static int cmd_dac_test_fastwrite(const struct shell *sh, size_t argc,
+                                  char **argv) {
+  uint8_t ch = (uint8_t)strtoul(argv[1], NULL, 10);
+  uint16_t val_lo = (uint16_t)strtoul(argv[2], NULL, 10);
+  uint16_t val_hi = (uint16_t)strtoul(argv[3], NULL, 10);
+
+  /* Prime SPI via OS driver once */
+  dac_write_value(dac_dev, ch, val_lo);
+  dac_spi_begin();
+
+  shell_print(sh, "Toggling CH%d: %u <-> %u (fast path). Ctrl+C to stop.", ch,
+              val_lo, val_hi);
+
+  for (int i = 0; i < 20; i++) {
+    uint16_t v = (i & 1) ? val_hi : val_lo;
+    dac_write_fast(ch, v);
+    shell_print(sh, "  step %d: wrote %u", i, v);
+    k_sleep(K_MSEC(1000));
+  }
+
+  dac_spi_end();
+
+  shell_print(sh, "Done.");
+  return 0;
+}
+
+/* Shell Command: dac test adcraw <ch>
+ * Sanity check: primes ADC3 for the channel and prints a handful of raw
+ * bare-metal readings. Use this to confirm adc3_prepare_channel() /
+ * adc_read_fast() actually produce nonzero, sane values before trusting the
+ * FRA sweep output. */
+static int cmd_dac_test_adcraw(const struct shell *sh, size_t argc,
+                               char **argv) {
+  uint32_t ch = strtoul(argv[1], NULL, 10);
+  if (ch > 7) {
+    shell_error(sh, "Invalid channel: 0-7 allowed");
+    return -EINVAL;
+  }
+  uint8_t adc_ch = dac_to_adc_map[ch];
+
+  adc3_prepare_channel(adc_ch);
+
+  for (int i = 0; i < 10; i++) {
+    LL_ADC_ClearFlag_EOC(ADC3);
+    LL_ADC_REG_StartConversion(ADC3);
+    uint32_t to = 20000;
+    while (!LL_ADC_IsActiveFlag_EOC(ADC3) && --to)
+      ;
+    uint32_t isr = ADC3->ISR;
+    uint16_t raw = (uint16_t)LL_ADC_REG_ReadConversionData12(ADC3);
+    float v_mv = ((float)raw * 3300.0f) / ((1 << ADC_RESOLUTION) - 1);
+    shell_print(sh, "raw=%u (0x%04X)  v_mv=%.2f  to=%u  ISR=0x%08X", raw, raw,
+                (double)v_mv, to, isr);
+    k_sleep(K_MSEC(100));
+  }
+
+  adc3_shutdown();
+  return 0;
+}
+
 SHELL_STATIC_SUBCMD_SET_CREATE(
     sub_dac_test,
     SHELL_CMD_ARG(sweep, NULL,
                   "Sweep: sweep <ch> <start_ma> <stop_ma> <step_ma> <delay_ms>",
                   cmd_dac_test_sweep, 6, 0),
+    SHELL_CMD_ARG(
+        fra, NULL,
+        "FRA Sweep: fra <ch> <dc_ma> <amp_ma> <f_start> <f_stop> <ppd>",
+        cmd_dac_test_fra, 7, 0),
+    SHELL_CMD_ARG(fastwrite, NULL,
+                  "Fast SPI test: fastwrite <ch> <val_lo> <val_hi>",
+                  cmd_dac_test_fastwrite, 4, 0),
+    SHELL_CMD_ARG(adcraw, NULL, "Raw ADC sanity check: adcraw <ch>",
+                  cmd_dac_test_adcraw, 2, 0),
     SHELL_SUBCMD_SET_END);
 
 SHELL_STATIC_SUBCMD_SET_CREATE(
