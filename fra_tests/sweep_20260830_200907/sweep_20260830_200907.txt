@@ -1,0 +1,17 @@
+========================================
+FRA Sweep Test Settings & Summary
+========================================
+Timestamp:        2026-08-30 20:09:07
+Channel:          1
+DC Offset:        100.00 mA
+AC Amplitude:     10.00 mA
+Start Frequency:  100.0 Hz
+Stop Frequency:   10000.0 Hz
+Points / Decade:  300.0
+Total Points:     601
+Freq Range Meas:  100.00 Hz to 9999.96 Hz
+Gain Range Meas:  14.61 dB to 24.16 dB
+----------------------------------------
+Data CSV:         sweep_20260830_200907.csv
+Plot PNG:         sweep_20260830_200907.png
+========================================
