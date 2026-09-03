@@ -394,8 +394,9 @@ static void adc3_prepare_channel(uint8_t adc_ch) {
   }
   k_busy_wait(50); /* 50 us startup delay for ADVREGEN */
 
-  /* Pre-select the ADC channel pin in PCSEL register (CRITICAL on STM32H7!) */
-  ADC3->PCSEL |= BIT(adc_ch);
+  /* Pre-select only the active ADC channel pin in PCSEL register (CRITICAL on
+   * STM32H7!) */
+  ADC3->PCSEL = BIT(adc_ch);
 
   /* Make sure ADC3 is disabled before reconfiguring calibration/sequencer */
   if (LL_ADC_IsEnabled(ADC3)) {
@@ -433,6 +434,13 @@ static void adc3_prepare_channel(uint8_t adc_ch) {
   /* Force plain DR (no DMA) transfer mode directly via CFGR */
   MODIFY_REG(ADC3->CFGR, ADC_CFGR_DMNGT, 0);
 
+  /* Force single-conversion mode explicitly -- if CONT was left set, the ADC
+   * would free-run and retrigger conversions continuously on its own, racing
+   * against explicit StartConversion() calls in the sample loop. */
+  LL_ADC_REG_SetContinuousMode(ADC3, LL_ADC_REG_CONV_SINGLE);
+  LL_ADC_REG_SetOverrun(ADC3, LL_ADC_REG_OVR_DATA_OVERWRITTEN);
+  LL_ADC_SetResolution(ADC3, LL_ADC_RESOLUTION_12B);
+
   /* Enable and wait for ADC ready. */
   LL_ADC_ClearFlag_ADRDY(ADC3);
   LL_ADC_Enable(ADC3);
@@ -458,7 +466,7 @@ static inline void adc3_shutdown(void) {
 /* Direct Fast-Path ADC3 read. Assumes adc3_prepare_channel() has already
  * enabled the ADC and selected the channel. */
 static inline uint16_t adc_read_fast(void) {
-  LL_ADC_ClearFlag_EOC(ADC3);
+  ADC3->ISR = ADC_ISR_EOC | ADC_ISR_EOS | ADC_ISR_OVR | ADC_ISR_EOSMP;
   LL_ADC_REG_StartConversion(ADC3);
   uint32_t to = 20000;
   while (!LL_ADC_IsActiveFlag_EOC(ADC3) && --to)
@@ -468,17 +476,29 @@ static inline uint16_t adc_read_fast(void) {
 
 /* Run Lock-In FRA measurement for a single frequency */
 static int run_fra_single_freq(uint8_t dac_ch, uint8_t adc_ch, float dc_ma,
-                               float amp_ma, float freq_hz, float *gain_db,
-                               float *phase_deg) {
-  /* Determine points per cycle P (32 for <= 2kHz, 16 for > 2kHz up to 10kHz) */
+                               float amp_ma, float freq_hz, int n_meas,
+                               int n_settle, float *gain_db, float *phase_deg) {
+  /* Points per cycle: 32 gives smoother waveform fidelity/less ZOH artifact
+   * at low frequencies where there is plenty of timing headroom. Above
+   * ~2kHz the required sample period shrinks enough that the fixed
+   * per-sample cost (SPI transfer + ADC conversion + bookkeeping, roughly
+   * 3.7-3.9us measured on this hardware) no longer fits at P=32, causing
+   * every sample to overrun above ~8kHz. Dropping to P=16 above 2kHz halves
+   * the required sample rate and restores headroom through 10kHz. Fewer
+   * points per cycle doesn't hurt the lock-in result -- the demodulation
+   * only cares about correlating against the fundamental sin/cos, and 16
+   * points/cycle is still comfortably above Nyquist for that. */
   int P = 32;
-  if (freq_hz > 2000.0f) {
+  if (freq_hz > 8000.0f) {
     P = 16;
   }
 
-  /* 10 settling cycles and 100 measurement cycles per frequency */
-  int n_settle = 10;
-  int n_meas = 100;
+  if (n_meas < 1) {
+    n_meas = 1;
+  }
+  if (n_settle < 0) {
+    n_settle = 0;
+  }
 
   /* Pre-compute 1-cycle DAC values and sin/cos reference tables */
   uint16_t dac_lut[32];
@@ -515,6 +535,17 @@ static int run_fra_single_freq(uint8_t dac_ch, uint8_t adc_ch, float dc_ma,
 
   uint32_t start_cycle = DWT->CYCCNT;
 
+  /* Lock the scheduler for the duration of the timing-critical sample loop.
+   * Without this, Zephyr's deferred logging/shell backend thread can wake
+   * up mid-measurement to drain a backlog of shell_print() output (this is
+   * exactly what "N messages dropped" warnings indicate) and preempt this
+   * thread for long enough to blow a sample deadline -- especially at
+   * higher frequencies where dt_cycles shrinks to just a few microseconds
+   * and any preemption at all causes an overrun. k_sched_lock() prevents
+   * any other thread from running until we unlock, while still allowing
+   * hardware interrupts (SysTick, UART RX) to fire normally. */
+  k_sched_lock();
+
   for (int step = 0; step < total_samples; step++) {
     int p = step % P;
 
@@ -523,12 +554,13 @@ static int run_fra_single_freq(uint8_t dac_ch, uint8_t adc_ch, float dc_ma,
 
     /* Short 1us settling delay for DAC & analog circuitry before sampling ADC
      */
-    uint32_t settle_offset = (dt_cycles > 1920) ? 480 : (dt_cycles / 4);
-    uint32_t sample_cycle =
-        start_cycle + (uint32_t)(((uint64_t)step * dt_cycles) + settle_offset);
-    while ((int32_t)(DWT->CYCCNT - sample_cycle) < 0) {
-      /* Spin-wait */
-    }
+    // uint32_t settle_offset = (dt_cycles > 1920) ? 480 : (dt_cycles / 4);
+    // uint32_t sample_cycle =
+    //     start_cycle + (uint32_t)(((uint64_t)step * dt_cycles) +
+    //     settle_offset);
+    // while ((int32_t)(DWT->CYCCNT - sample_cycle) < 0) {
+    //   /* Spin-wait */
+    // }
 
     /* Fast Direct ADC conversion (~0.3 us) */
     uint16_t raw_sample = adc_read_fast();
@@ -560,13 +592,12 @@ static int run_fra_single_freq(uint8_t dac_ch, uint8_t adc_ch, float dc_ma,
     }
   }
 
+  k_sched_unlock();
+
   if (overrun_count > 0) {
     printk("FRA %.1f Hz: %u timing overruns!\n", (double)freq_hz,
            overrun_count);
   }
-  //   printk("ADC DEBUG: min=%u max=%u sum_i=%.2f sum_q=%.2f\n", min_adc,
-  //   max_adc,
-  //  sum_i, sum_q);
 
   /* Compute In-phase (I) and Quadrature (Q) components */
   double I = (2.0 * sum_i) / (double)total_meas_samples;
@@ -584,7 +615,7 @@ static int run_fra_single_freq(uint8_t dac_ch, uint8_t adc_ch, float dc_ma,
 }
 
 /* Shell Command: dac test fra <channel> <dc_ma> <amp_ma> <f_start_hz>
- * <f_stop_hz> <ppd> */
+ * <f_stop_hz> <ppd> [n_meas] [n_settle] */
 static int cmd_dac_test_fra(const struct shell *sh, size_t argc, char **argv) {
   uint32_t channel = strtoul(argv[1], NULL, 10);
   float dc_ma = strtof(argv[2], NULL);
@@ -592,6 +623,22 @@ static int cmd_dac_test_fra(const struct shell *sh, size_t argc, char **argv) {
   float f_start = strtof(argv[4], NULL);
   float f_stop = strtof(argv[5], NULL);
   float ppd = strtof(argv[6], NULL);
+
+  int n_meas = 50;   /* Default 50 measurement cycles */
+  int n_settle = 10; /* Default 10 settling cycles */
+
+  if (argc >= 8) {
+    n_meas = (int)strtol(argv[7], NULL, 10);
+    if (n_meas < 1) {
+      n_meas = 1;
+    }
+  }
+  if (argc >= 9) {
+    n_settle = (int)strtol(argv[8], NULL, 10);
+    if (n_settle < 0) {
+      n_settle = 0;
+    }
+  }
 
   if (channel > 7) {
     shell_error(sh, "Invalid channel: 0-7 allowed");
@@ -617,9 +664,9 @@ static int cmd_dac_test_fra(const struct shell *sh, size_t argc, char **argv) {
 
   shell_print(sh,
               "Starting FRA Sweep on CH %d: DC=%.2fmA, Amp=%.2fmA, "
-              "%.1fHz-%.1fHz, PPD=%.1f",
+              "%.1fHz-%.1fHz, PPD=%.1f, Cycles=%d (settle=%d)",
               channel, (double)dc_ma, (double)amp_ma, (double)f_start,
-              (double)f_stop, (double)ppd);
+              (double)f_stop, (double)ppd, n_meas, n_settle);
   shell_print(sh, "freq_hz,gain_db,phase_deg");
 
   /* Prime DAC via OS driver ONCE so GPIO alt-function/clocks are set up
@@ -629,9 +676,7 @@ static int cmd_dac_test_fra(const struct shell *sh, size_t argc, char **argv) {
   /* Prepare SPI peripheral ONCE for the entire sweep */
   dac_spi_begin();
 
-  /* Prepare ADC3 ONCE for the entire sweep: calibrate, select the correct
-   * regular channel, and enable. This is the piece that was missing before
-   * -- without it ADC3 stays disabled and every fast read times out. */
+  /* Prepare ADC3 ONCE for the entire sweep */
   adc3_prepare_channel(adc_ch);
 
   float log_start = log10f(f_start);
@@ -648,7 +693,7 @@ static int cmd_dac_test_fra(const struct shell *sh, size_t argc, char **argv) {
     float phase_deg = 0.0f;
 
     int ret = run_fra_single_freq((uint8_t)channel, adc_ch, dc_ma, amp_ma, f,
-                                  &gain_db, &phase_deg);
+                                  n_meas, n_settle, &gain_db, &phase_deg);
     if (ret < 0) {
       shell_error(sh, "FRA measurement error at %.2f Hz (err %d)", (double)f,
                   ret);
@@ -664,6 +709,7 @@ static int cmd_dac_test_fra(const struct shell *sh, size_t argc, char **argv) {
   dac_spi_end();
   adc3_shutdown();
 
+  shell_print(sh, "Sweep Complete");
   return 0;
 }
 
@@ -714,7 +760,7 @@ static int cmd_dac_test_adcraw(const struct shell *sh, size_t argc,
   adc3_prepare_channel(adc_ch);
 
   for (int i = 0; i < 10; i++) {
-    LL_ADC_ClearFlag_EOC(ADC3);
+    ADC3->ISR = ADC_ISR_EOC | ADC_ISR_EOS | ADC_ISR_OVR | ADC_ISR_EOSMP;
     LL_ADC_REG_StartConversion(ADC3);
     uint32_t to = 20000;
     while (!LL_ADC_IsActiveFlag_EOC(ADC3) && --to)
@@ -731,20 +777,135 @@ static int cmd_dac_test_adcraw(const struct shell *sh, size_t argc,
   return 0;
 }
 
+/* Shell Command: dac test rawcycle <ch> [dc_ma] [amp_ma] [freq_hz]
+ * Captures and prints 1 full 32-point sine wave cycle of DAC command vs ADC
+ * readback at exact FRA sample timing. */
+static int cmd_dac_test_rawcycle(const struct shell *sh, size_t argc,
+                                 char **argv) {
+  uint32_t ch = strtoul(argv[1], NULL, 10);
+  float dc_ma = (argc > 2) ? strtof(argv[2], NULL) : 50.0f;
+  float amp_ma = (argc > 3) ? strtof(argv[3], NULL) : 10.0f;
+  float freq_hz = (argc > 4) ? strtof(argv[4], NULL) : 1000.0f;
+
+  if (ch > 7) {
+    shell_error(sh, "Invalid channel: 0-7 allowed");
+    return -EINVAL;
+  }
+  if (freq_hz <= 0.0f || freq_hz > 50000.0f) {
+    shell_error(sh, "Invalid frequency");
+    return -EINVAL;
+  }
+
+  uint8_t adc_ch = dac_to_adc_map[ch];
+  const int P = 32;
+  uint16_t dac_lut[32];
+  float target_ma[32];
+  uint16_t adc_lut[32];
+
+  for (int p = 0; p < P; p++) {
+    float theta = (2.0f * (float)M_PI * (float)p) / (float)P;
+    target_ma[p] = dc_ma + amp_ma * sinf(theta);
+    dac_lut[p] = (uint16_t)current_ma_to_dac_value(target_ma[p]);
+  }
+
+  uint32_t dt_cycles =
+      (uint32_t)(sys_clock_hw_cycles_per_sec() / (freq_hz * (float)P));
+  if (dt_cycles == 0) {
+    dt_cycles = 1;
+  }
+
+  /* Prime hardware */
+  dac_write_value(dac_dev, ch, current_ma_to_dac_value(dc_ma));
+  dac_spi_begin();
+  adc3_prepare_channel(adc_ch);
+
+  CoreDebug->DEMCR |= CoreDebug_DEMCR_TRCENA_Msk;
+  DWT->CTRL |= DWT_CTRL_CYCCNTENA_Msk;
+
+  k_sched_lock();
+  uint32_t start_cycle = DWT->CYCCNT;
+
+  /* Run 5 settling cycles + 1 capture cycle */
+  int total_samples = 6 * P;
+  for (int step = 0; step < total_samples; step++) {
+    int p = step % P;
+    dac_write_fast((uint8_t)ch, dac_lut[p]);
+
+    uint16_t raw_sample = adc_read_fast();
+    if (step >= 5 * P) {
+      adc_lut[p] = raw_sample;
+    }
+
+    uint32_t target_cycle =
+        start_cycle + (uint32_t)(((uint64_t)(step + 1) * dt_cycles));
+    while ((DWT->CYCCNT < target_cycle) &&
+           (target_cycle - DWT->CYCCNT) < 0x7FFFFFFFUL) {
+      /* Spin-wait */
+    }
+  }
+
+  /* Restore DC setpoint */
+  dac_write_fast((uint8_t)ch, (uint16_t)current_ma_to_dac_value(dc_ma));
+  k_sched_unlock();
+
+  dac_spi_end();
+  adc3_shutdown();
+
+  shell_print(
+      sh,
+      "--- Raw FRA Cycle Capture (CH %d, %.1f Hz, DC=%.2fmA, Amp=%.2fmA) ---",
+      ch, (double)freq_hz, (double)dc_ma, (double)amp_ma);
+  shell_print(sh, "pt  | DAC (mA) | DAC cnt | ADC raw | ADC (mV) | ADC (mA)");
+  shell_print(sh, "----+----------+---------+---------+----------+---------");
+
+  uint16_t min_raw = 65535, max_raw = 0;
+  for (int p = 0; p < P; p++) {
+    uint16_t raw = adc_lut[p];
+    if (raw < min_raw)
+      min_raw = raw;
+    if (raw > max_raw)
+      max_raw = raw;
+    float v_mv = ((float)raw * 3300.0f) / ((1 << ADC_RESOLUTION) - 1);
+    float i_ma = (v_mv - 1500.0f) / 10.0f;
+    shell_print(sh, "%2d  |  %6.2f  |  %5u  |  %5u  | %8.2f | %7.2f", p,
+                (double)target_ma[p], dac_lut[p], raw, (double)v_mv,
+                (double)i_ma);
+  }
+
+  float min_v = ((float)min_raw * 3300.0f) / ((1 << ADC_RESOLUTION) - 1);
+  float max_v = ((float)max_raw * 3300.0f) / ((1 << ADC_RESOLUTION) - 1);
+  float min_i = (min_v - 1500.0f) / 10.0f;
+  float max_i = (max_v - 1500.0f) / 10.0f;
+
+  shell_print(sh, "--------------------------------------------------------");
+  shell_print(sh, "DAC Command Span: %.2f mA to %.2f mA (Pk-Pk = %.2f mA)",
+              (double)(dc_ma - amp_ma), (double)(dc_ma + amp_ma),
+              (double)(2.0f * amp_ma));
+  shell_print(
+      sh, "ADC Readback Span: %.2f mA to %.2f mA (Pk-Pk = %.2f mA, raw=%u..%u)",
+      (double)min_i, (double)max_i, (double)(max_i - min_i), min_raw, max_raw);
+
+  return 0;
+}
+
 SHELL_STATIC_SUBCMD_SET_CREATE(
     sub_dac_test,
     SHELL_CMD_ARG(sweep, NULL,
                   "Sweep: sweep <ch> <start_ma> <stop_ma> <step_ma> <delay_ms>",
                   cmd_dac_test_sweep, 6, 0),
-    SHELL_CMD_ARG(
-        fra, NULL,
-        "FRA Sweep: fra <ch> <dc_ma> <amp_ma> <f_start> <f_stop> <ppd>",
-        cmd_dac_test_fra, 7, 0),
+    SHELL_CMD_ARG(fra, NULL,
+                  "FRA Sweep: fra <ch> <dc_ma> <amp_ma> <f_start> <f_stop> "
+                  "<ppd> [n_meas] [n_settle]",
+                  cmd_dac_test_fra, 7, 2),
     SHELL_CMD_ARG(fastwrite, NULL,
                   "Fast SPI test: fastwrite <ch> <val_lo> <val_hi>",
                   cmd_dac_test_fastwrite, 4, 0),
     SHELL_CMD_ARG(adcraw, NULL, "Raw ADC sanity check: adcraw <ch>",
                   cmd_dac_test_adcraw, 2, 0),
+    SHELL_CMD_ARG(rawcycle, NULL,
+                  "Capture 1 full sine cycle: rawcycle <ch> [dc_ma] [amp_ma] "
+                  "[freq_hz]",
+                  cmd_dac_test_rawcycle, 2, 3),
     SHELL_SUBCMD_SET_END);
 
 SHELL_STATIC_SUBCMD_SET_CREATE(

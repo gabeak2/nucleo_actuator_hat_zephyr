@@ -3882,3 +3882,55 @@ events:
         - "/pkg/env/global/bin"
       CMAKE_INSTALL_PREFIX: "/usr/local"
 ...
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/Users/gabe/zephyrproject/zephyr/cmake/compiler/gcc/target.cmake:8 (find_program)"
+      - "/Users/gabe/zephyrproject/zephyr/cmake/modules/FindTargetTools.cmake:116 (include)"
+      - "/Users/gabe/zephyrproject/zephyr/cmake/modules/kernel.cmake:25 (find_package)"
+      - "/Users/gabe/zephyrproject/zephyr/cmake/modules/zephyr_default.cmake:133 (include)"
+      - "/Users/gabe/zephyrproject/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/Users/gabe/zephyrproject/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:97 (include_boilerplate)"
+      - "CMakeLists.txt:3 (find_package)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "/Users/gabe/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc"
+    candidate_directories:
+      - "/Users/gabe/zephyr-sdk-1.0.1/gnu/"
+    found: "/Users/gabe/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/Users/gabe/zephyr-sdk-1.0.1/hosttools/usr"
+      ENV{PATH}:
+        - "/Users/gabe/zephyrproject/.venv/bin"
+        - "/Users/gabe/.gemini/antigravity-ide/bin"
+        - "/Users/gabe/.antigravity-ide/antigravity-ide/bin"
+        - "/Users/gabe/.local/bin"
+        - "/opt/homebrew/opt/python/libexec/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/pkg/env/global/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+...

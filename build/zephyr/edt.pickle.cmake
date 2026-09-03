@@ -1033,7 +1033,7 @@ set_target_properties(${DEVICETREE_TARGET}
     "DT_NODELABEL|usart3" "/soc/serial@40004800"
     "DT_PROP|/soc/serial@40004800|reg" "1073760256;1024"
     "DT_PROP|/soc/serial@40004800|interrupts" "39;0"
-    "DT_PROP|/soc/serial@40004800|current-speed" "115200"
+    "DT_PROP|/soc/serial@40004800|current-speed" "921600"
     "DT_PROP|/soc/serial@40004800|stop-bits" "1"
     "DT_PROP|/soc/serial@40004800|data-bits" "8"
     "DT_PROP|/soc/serial@40004800|single-wire" "False"

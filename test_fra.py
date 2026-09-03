@@ -3,7 +3,7 @@ import serial
 import time
 
 port = '/dev/cu.usbmodem114403'
-baud = 115200
+baud = 921600
 
 ser = serial.Serial(port, baud, timeout=0.5)
 ser.write(b'\r\n\r\n')

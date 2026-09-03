@@ -619,27 +619,33 @@
     "CONFIG_INPUT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      63
+    ]
   ],
   [
     "CONFIG_WIFI",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      64
+    ]
   ],
   [
     "CONFIG_ADC_INIT_PRIORITY",
     "y",
     "int",
     "50",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/drivers/adc/Kconfig",
-      72
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      65
     ]
   ],
   [
@@ -647,48 +653,54 @@
     "y",
     "int",
     "1024",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/kernel/Kconfig",
-      129
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      66
     ]
   ],
   [
     "CONFIG_REGULATOR",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      67
+    ]
   ],
   [
     "CONFIG_SYSTEM_WORKQUEUE_STACK_SIZE",
     "y",
     "int",
     "1024",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/kernel/Kconfig",
-      502
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      68
     ]
   ],
   [
     "CONFIG_FPU",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      69
+    ]
   ],
   [
     "CONFIG_SHELL_STACK_SIZE",
     "y",
     "int",
     "2048",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/Kconfig",
-      58
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      70
     ]
   ],
   [
@@ -725,25 +737,34 @@
     "CONFIG_MIPI_DSI",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      74
+    ]
   ],
   [
     "CONFIG_MEMC",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      75
+    ]
   ],
   [
     "CONFIG_MODEM",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      76
+    ]
   ],
   [
     "CONFIG_UART_INTERRUPT_DRIVEN",
@@ -759,25 +780,34 @@
     "CONFIG_SPI_STM32_INTERRUPT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      78
+    ]
   ],
   [
     "CONFIG_SPI_STM32_DMA",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      79
+    ]
   ],
   [
     "CONFIG_GNSS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      80
+    ]
   ],
   [
     "CONFIG_NUM_IRQS",
@@ -795,10 +825,10 @@
     "y",
     "int",
     "480000000",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/soc/st/stm32/Kconfig.defconfig",
-      99
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      82
     ]
   ],
   [
@@ -806,10 +836,10 @@
     "y",
     "int",
     "32",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/arch/arm/core/cortex_m/Kconfig",
-      115
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      83
     ]
   ],
   [
@@ -817,10 +847,10 @@
     "y",
     "int",
     "32",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/arch/arm/core/cortex_m/Kconfig",
-      118
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      84
     ]
   ],
   [
@@ -828,10 +858,10 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/soc/st/stm32/stm32h7x/Kconfig.defconfig",
-      19
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      85
     ]
   ],
   [
@@ -839,10 +869,10 @@
     "y",
     "int",
     "2048",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/arch/Kconfig",
-      303
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      86
     ]
   ],
   [
@@ -850,10 +880,10 @@
     "y",
     "hex",
     "0x8000000",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/soc/st/stm32/Kconfig.defconfig",
-      143
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      87
     ]
   ],
   [
@@ -861,10 +891,10 @@
     "y",
     "int",
     "1",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/kernel/smp/Kconfig",
-      15
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      88
     ]
   ],
   [
@@ -882,10 +912,10 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/soc/st/stm32/Kconfig.defconfig",
-      18
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      90
     ]
   ],
   [
@@ -893,10 +923,10 @@
     "y",
     "int",
     "320",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/kernel/Kconfig",
-      143
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      91
     ]
   ],
   [
@@ -904,10 +934,10 @@
     "y",
     "int",
     "2048",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/kernel/Kconfig",
-      153
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      92
     ]
   ],
   [
@@ -915,10 +945,10 @@
     "y",
     "int",
     "10000",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/kernel/Kconfig",
-      700
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      93
     ]
   ],
   [
@@ -926,10 +956,10 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/Kconfig.zephyr",
-      807
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      94
     ]
   ],
   [
@@ -937,10 +967,10 @@
     "y",
     "hex",
     "0",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/Kconfig.zephyr",
-      165
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      95
     ]
   ],
   [
@@ -948,10 +978,10 @@
     "y",
     "string",
     "__start",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/Kconfig.zephyr",
-      237
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      96
     ]
   ],
   [
@@ -961,8 +991,8 @@
     "y",
     "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/boards/st/nucleo_h753zi/nucleo_h753zi_defconfig",
-      4
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      97
     ]
   ],
   [
@@ -980,9 +1010,10 @@
     "y",
     "bool",
     "y",
-    "imply",
+    "assign",
     [
-      "CPU_CORTEX_M && ARM"
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      99
     ]
   ],
   [
@@ -999,25 +1030,34 @@
     "CONFIG_COUNTER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      101
+    ]
   ],
   [
     "CONFIG_SHARED_INTERRUPTS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      102
+    ]
   ],
   [
     "CONFIG_SRAM_VECTOR_TABLE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      103
+    ]
   ],
   [
     "CONFIG_BUILD_OUTPUT_UF2_FAMILY_ID",
@@ -1054,43 +1094,55 @@
     "CONFIG_PM_DEVICE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      107
+    ]
   ],
   [
     "CONFIG_STM32H7_DUAL_CORE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      108
+    ]
   ],
   [
     "CONFIG_OTP",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      109
+    ]
   ],
   [
     "CONFIG_NVMEM",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      110
+    ]
   ],
   [
     "CONFIG_TICKLESS_KERNEL",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/kernel/Kconfig",
-      1045
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      111
     ]
   ],
   [
@@ -1098,102 +1150,120 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/drivers/timer/Kconfig.cortex_m_systick",
-      9
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      112
     ]
   ],
   [
     "CONFIG_CACHE_STM32",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      113
+    ]
   ],
   [
     "CONFIG_CLOCK_CONTROL_INIT_PRIORITY",
     "y",
     "int",
     "1",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/soc/st/stm32/Kconfig.defconfig",
-      130
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      114
     ]
   ],
   [
     "CONFIG_USE_DT_CODE_PARTITION",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      115
+    ]
   ],
   [
     "CONFIG_STM32_BACKUP_PROTECTION",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/soc/st/stm32/Kconfig.defconfig",
-      165
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      116
     ]
   ],
   [
     "CONFIG_DYNAMIC_THREAD",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      117
+    ]
   ],
   [
     "CONFIG_MULTI_LEVEL_INTERRUPTS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      118
+    ]
   ],
   [
     "CONFIG_ZERO_LATENCY_IRQS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      119
+    ]
   ],
   [
     "CONFIG_NUM_METAIRQ_PRIORITIES",
     "y",
     "int",
     "0",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/kernel/Kconfig",
-      97
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      120
     ]
   ],
   [
     "CONFIG_POWER_DOMAIN",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      121
+    ]
   ],
   [
     "CONFIG_NUM_PREEMPT_PRIORITIES",
     "y",
     "int",
     "15",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/kernel/Kconfig",
-      55
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      122
     ]
   ],
   [
@@ -1211,29 +1281,32 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/arch/Kconfig",
-      592
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      124
     ]
   ],
   [
     "CONFIG_DYNAMIC_INTERRUPTS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      125
+    ]
   ],
   [
     "CONFIG_GEN_ISR_TABLES",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/arch/arm/core/cortex_m/Kconfig",
-      328
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      126
     ]
   ],
   [
@@ -1241,9 +1314,10 @@
     "y",
     "bool",
     "y",
-    "imply",
+    "assign",
     [
-      "KERNEL_SHELL && SHELL"
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      127
     ]
   ],
   [
@@ -1251,10 +1325,10 @@
     "y",
     "int",
     "20",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/kernel/Kconfig",
-      560
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      128
     ]
   ],
   [
@@ -1262,10 +1336,10 @@
     "y",
     "hex",
     "0",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/Kconfig.zephyr",
-      135
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      129
     ]
   ],
   [
@@ -1273,81 +1347,99 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/kernel/Kconfig",
-      736
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      130
     ]
   ],
   [
     "CONFIG_INIT_ARCH_HW_AT_BOOT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      131
+    ]
   ],
   [
     "CONFIG_BUILD_OUTPUT_S19",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      132
+    ]
   ],
   [
     "CONFIG_ROMSTART_RELOCATION_ROM",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      133
+    ]
   ],
   [
     "CONFIG_RESET_INIT_PRIORITY",
     "y",
     "int",
     "35",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/drivers/reset/Kconfig",
-      21
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      134
     ]
   ],
   [
     "CONFIG_TIMER_READS_ITS_FREQUENCY_AT_RUNTIME",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      135
+    ]
   ],
   [
     "CONFIG_DCACHE",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/arch/Kconfig",
-      1256
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      136
     ]
   ],
   [
     "CONFIG_FLASH",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      137
+    ]
   ],
   [
     "CONFIG_CODE_DATA_RELOCATION",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      138
+    ]
   ],
   [
     "CONFIG_HW_STACK_PROTECTION",
@@ -1356,8 +1448,8 @@
     "y",
     "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/boards/st/nucleo_h753zi/nucleo_h753zi_defconfig",
-      7
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      139
     ]
   ],
   [
@@ -1374,43 +1466,55 @@
     "CONFIG_WUC",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      141
+    ]
   ],
   [
     "CONFIG_SYSTEM_CLOCK_HW_CYCLES_PER_SEC_RUNTIME_UPDATE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      142
+    ]
   ],
   [
     "CONFIG_MFD",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      143
+    ]
   ],
   [
     "CONFIG_CODE_DATA_RELOCATION_SRAM",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      144
+    ]
   ],
   [
     "CONFIG_CACHE",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/drivers/cache/Kconfig",
-      6
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      145
     ]
   ],
   [
@@ -1420,35 +1524,41 @@
     "y",
     "assign",
     [
-      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/prj.conf",
-      7
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      146
     ]
   ],
   [
     "CONFIG_NOCACHE_MEMORY",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      147
+    ]
   ],
   [
     "CONFIG_PM_CPU_OPS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      148
+    ]
   ],
   [
     "CONFIG_ARCH_SW_ISR_TABLE_ALIGN",
     "y",
     "int",
     "4",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/arch/Kconfig",
-      677
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      149
     ]
   ],
   [
@@ -1456,10 +1566,10 @@
     "y",
     "string",
     "",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig.misc",
-      124
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      150
     ]
   ],
   [
@@ -1469,63 +1579,75 @@
     "y",
     "assign",
     [
-      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/prj.conf",
-      16
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      151
     ]
   ],
   [
     "CONFIG_ASSERT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      152
+    ]
   ],
   [
     "CONFIG_LOG_PROCESS_THREAD_STACK_SIZE",
     "y",
     "int",
     "768",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig.processing",
-      95
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      153
     ]
   ],
   [
     "CONFIG_DEVICE_DEPS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      154
+    ]
   ],
   [
     "CONFIG_UART_USE_RUNTIME_CONFIGURE",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/drivers/serial/Kconfig",
-      59
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      155
     ]
   ],
   [
     "CONFIG_PINCTRL_KEEP_SLEEP_STATE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      156
+    ]
   ],
   [
     "CONFIG_SYSCON",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      157
+    ]
   ],
   [
     "CONFIG_SOC_EARLY_INIT_HOOK",
@@ -1554,27 +1676,30 @@
     "y",
     "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/boards/st/nucleo_h753zi/nucleo_h753zi_defconfig",
-      13
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      160
     ]
   ],
   [
     "CONFIG_WINSTREAM",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      161
+    ]
   ],
   [
     "CONFIG_COMMON_LIBC_MALLOC_ARENA_SIZE",
     "y",
     "int",
     "-1",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/lib/libc/common/Kconfig",
-      64
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      162
     ]
   ],
   [
@@ -1582,19 +1707,22 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/arch/Kconfig",
-      639
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      163
     ]
   ],
   [
     "CONFIG_REBOOT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      164
+    ]
   ],
   [
     "CONFIG_GEN_IRQ_START_VECTOR",
@@ -1623,10 +1751,10 @@
     "y",
     "int",
     "4",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/arch/Kconfig",
-      604
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      167
     ]
   ],
   [
@@ -1644,19 +1772,22 @@
     "CONFIG_BOOTLOADER_MCUBOOT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      169
+    ]
   ],
   [
     "CONFIG_KERNEL_MEM_POOL",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/kernel/Kconfig",
-      642
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      170
     ]
   ],
   [
@@ -1664,84 +1795,99 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/kernel/Kconfig",
-      14
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      171
     ]
   ],
   [
     "CONFIG_OUTPUT_DISASSEMBLY",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      172
+    ]
   ],
   [
     "CONFIG_LINKER_USE_RELAX",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/Kconfig.zephyr",
-      323
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      173
     ]
   ],
   [
     "CONFIG_WATCHDOG",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      174
+    ]
   ],
   [
     "CONFIG_ICACHE",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/arch/Kconfig",
-      1263
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      175
     ]
   ],
   [
     "CONFIG_STATIC_INIT_GNU",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      176
+    ]
   ],
   [
     "CONFIG_BUILD_GAP_FILL_PATTERN",
     "y",
     "hex",
     "0xFF",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/Kconfig.zephyr",
-      779
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      177
     ]
   ],
   [
     "CONFIG_BUILD_ONLY_NO_BLOBS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      182
+    ]
   ],
   [
     "CONFIG_ACPI",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      195
+    ]
   ],
   [
     "CONFIG_ZEPHYR_ACPICA_MODULE",
@@ -1791,9 +1937,12 @@
     "CONFIG_CMSIS_DSP",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      212
+    ]
   ],
   [
     "CONFIG_ZEPHYR_CMSIS_NN_MODULE",
@@ -1810,9 +1959,12 @@
     "CONFIG_CMSIS_NN",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      219
+    ]
   ],
   [
     "CONFIG_ZEPHYR_CMSIS_6_MODULE",
@@ -1839,9 +1991,12 @@
     "CONFIG_CMSIS_M_CHECK_DEVICE_DEFINES",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      227
+    ]
   ],
   [
     "CONFIG_ZEPHYR_DHARA_MODULE",
@@ -1935,9 +2090,12 @@
     "CONFIG_ETHOS_U",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      273
+    ]
   ],
   [
     "CONFIG_ZEPHYR_HAL_ETHOS_U_MODULE",
@@ -1976,9 +2134,12 @@
     "CONFIG_USE_INFINEON_ABSTRACTION_RTOS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      287
+    ]
   ],
   [
     "CONFIG_ZEPHYR_HAL_INTEL_MODULE",
@@ -2039,17 +2200,23 @@
     "CONFIG_NXP_MULTICORE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      310
+    ]
   ],
   [
     "CONFIG_RPMSGLITE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      311
+    ]
   ],
   [
     "CONFIG_ZEPHYR_OPENISA_MODULE",
@@ -2088,9 +2255,12 @@
     "CONFIG_BT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      321
+    ]
   ],
   [
     "CONFIG_ZEPHYR_HAL_RENESAS_MODULE",
@@ -2173,9 +2343,12 @@
     "CONFIG_TDK_HAL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      360
+    ]
   ],
   [
     "CONFIG_ZEPHYR_HAL_TELINK_MODULE",
@@ -2236,9 +2409,12 @@
     "CONFIG_WIFI_NM_WPA_SUPPLICANT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      384
+    ]
   ],
   [
     "CONFIG_ZEPHYR_HOSTAP_MODULE",
@@ -2299,9 +2475,12 @@
     "CONFIG_LIBSBC",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      401
+    ]
   ],
   [
     "CONFIG_ZEPHYR_LITTLEFS_MODULE",
@@ -2340,9 +2519,12 @@
     "CONFIG_HAS_SEMTECH_RADIO_DRIVERS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      420
+    ]
   ],
   [
     "CONFIG_ZEPHYR_LVGL_MODULE",
@@ -2392,9 +2574,12 @@
     "CONFIG_PSA_CRYPTO",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      435
+    ]
   ],
   [
     "CONFIG_ZEPHYR_MCUBOOT_MODULE",
@@ -2444,9 +2629,12 @@
     "CONFIG_NANOPB",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      446
+    ]
   ],
   [
     "CONFIG_ZEPHYR_NRF_WIFI_MODULE",
@@ -2463,9 +2651,12 @@
     "CONFIG_NRF70_BUSLIB",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      453
+    ]
   ],
   [
     "CONFIG_ZEPHYR_OPEN_AMP_MODULE",
@@ -2482,9 +2673,12 @@
     "CONFIG_OPENTHREAD",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      461
+    ]
   ],
   [
     "CONFIG_ZEPHYR_OPENTHREAD_MODULE",
@@ -2501,9 +2695,12 @@
     "CONFIG_PERCEPIO_DFM",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      472
+    ]
   ],
   [
     "CONFIG_ZEPHYR_PERCEPIO_MODULE",
@@ -2520,9 +2717,12 @@
     "CONFIG_PICOLIBC_MODULE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      479
+    ]
   ],
   [
     "CONFIG_ZEPHYR_PICOLIBC_MODULE",
@@ -2582,9 +2782,12 @@
     "CONFIG_USE_SEGGER_RTT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      491
+    ]
   ],
   [
     "CONFIG_ZEPHYR_TF_M_TESTS_MODULE",
@@ -2623,9 +2826,12 @@
     "CONFIG_BUILD_WITH_TFA",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      501
+    ]
   ],
   [
     "CONFIG_ZEPHYR_TRUSTED_FIRMWARE_M_MODULE",
@@ -2664,9 +2870,12 @@
     "CONFIG_ZCBOR",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      520
+    ]
   ],
   [
     "CONFIG_ZEPHYR_XENLIB_MODULE",
@@ -2694,49 +2903,67 @@
     "CONFIG_LIBMETAL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      530
+    ]
   ],
   [
     "CONFIG_LVGL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      531
+    ]
   ],
   [
     "CONFIG_HAS_MEC_HAL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      532
+    ]
   ],
   [
     "CONFIG_HAS_MPFS_HAL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      533
+    ]
   ],
   [
     "CONFIG_HAS_MEC5_HAL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      534
+    ]
   ],
   [
     "CONFIG_OPENAMP",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      535
+    ]
   ],
   [
     "CONFIG_HAS_STM32CUBE",
@@ -2782,25 +3009,34 @@
     "CONFIG_MIPI_SYST_LIB",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      540
+    ]
   ],
   [
     "CONFIG_HAS_TELINK_DRIVERS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      541
+    ]
   ],
   [
     "CONFIG_MCUBOOT_BOOTUTIL_LIB",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      542
+    ]
   ],
   [
     "CONFIG_BOARD",
@@ -2839,9 +3075,12 @@
     "CONFIG_NET_DRIVERS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      556
+    ]
   ],
   [
     "CONFIG_BOARD_NUCLEO_H753ZI",
@@ -2943,54 +3182,66 @@
     "CONFIG_HWINFO",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      575
+    ]
   ],
   [
     "CONFIG_STM32_ENABLE_DEBUG_SLEEP_STOP",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      576
+    ]
   ],
   [
     "CONFIG_SWJ_ANALOG_PRIORITY",
     "y",
     "int",
     "49",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/soc/st/stm32/common/Kconfig",
-      37
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      577
     ]
   ],
   [
     "CONFIG_STM32_XSPIM",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      578
+    ]
   ],
   [
     "CONFIG_BUILD_OUTPUT_INFO_HEADER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      579
+    ]
   ],
   [
     "CONFIG_GPIO_INIT_PRIORITY",
     "y",
     "int",
     "40",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/drivers/gpio/Kconfig",
-      50
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      580
     ]
   ],
   [
@@ -3038,11 +3289,8 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
-      5
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_SOC_LOG_LEVEL",
@@ -3070,9 +3318,12 @@
     "CONFIG_EXTRA_EXCEPTION_INFO",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      591
+    ]
   ],
   [
     "CONFIG_ARCH_HAS_SINGLE_THREAD_SUPPORT",
@@ -3109,9 +3360,12 @@
     "CONFIG_MPU_ALLOW_FLASH_WRITE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      595
+    ]
   ],
   [
     "CONFIG_CPU_CORTEX_M",
@@ -3127,9 +3381,12 @@
     "CONFIG_ARM_ZIMAGE_HEADER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      601
+    ]
   ],
   [
     "CONFIG_ISA_THUMB2",
@@ -3157,10 +3414,10 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/arch/arm/core/Kconfig",
-      143
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      604
     ]
   ],
   [
@@ -3168,37 +3425,43 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/arch/arm/core/Kconfig",
-      161
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      605
     ]
   ],
   [
     "CONFIG_RUNTIME_NMI",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      606
+    ]
   ],
   [
     "CONFIG_PLATFORM_SPECIFIC_INIT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      607
+    ]
   ],
   [
     "CONFIG_FAULT_DUMP",
     "y",
     "int",
     "2",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/arch/arm/core/Kconfig",
-      205
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      608
     ]
   ],
   [
@@ -3217,10 +3480,10 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/arch/arm/core/Kconfig",
-      336
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      610
     ]
   ],
   [
@@ -3228,11 +3491,8 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/Users/gabe/zephyrproject/zephyr/arch/arm/core/Kconfig",
-      344
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_FP16_ALT",
@@ -3326,44 +3586,53 @@
     "CONFIG_SW_VECTOR_RELAY",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      625
+    ]
   ],
   [
     "CONFIG_CORTEX_M_DWT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      626
+    ]
   ],
   [
     "CONFIG_CORTEX_M_DEBUG_MONITOR_HOOK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      627
+    ]
   ],
   [
     "CONFIG_TRAP_UNALIGNED_ACCESS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      628
+    ]
   ],
   [
     "CONFIG_NULL_POINTER_EXCEPTION_DETECTION_NONE",
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/Users/gabe/zephyrproject/zephyr/arch/arm/core/cortex_m/Kconfig",
-      422
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_NULL_POINTER_EXCEPTION_DETECTION_DWT",
@@ -3385,9 +3654,12 @@
     "CONFIG_ARM_GCC_FP_WORKAROUND",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      634
+    ]
   ],
   [
     "CONFIG_MPU_STACK_GUARD",
@@ -3403,52 +3675,67 @@
     "CONFIG_MPU_DISABLE_BACKGROUND_MAP",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      636
+    ]
   ],
   [
     "CONFIG_ARM_MPU_CM7_UNMAPPED_REGION",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      637
+    ]
   ],
   [
     "CONFIG_CUSTOM_SECTION_ALIGN",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      638
+    ]
   ],
   [
     "CONFIG_CUSTOM_SECTION_MIN_ALIGN_SIZE",
     "y",
     "int",
     "32",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/arch/arm/core/mpu/Kconfig",
-      88
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      639
     ]
   ],
   [
     "CONFIG_ARM_MPU_SRAM_WRITE_THROUGH",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      640
+    ]
   ],
   [
     "CONFIG_ARM_MPU_SKIP_ARCH_INIT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      641
+    ]
   ],
   [
     "CONFIG_HAS_SWO",
@@ -3494,25 +3781,34 @@
     "CONFIG_SEMIHOST",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      652
+    ]
   ],
   [
     "CONFIG_ISR_TABLE_SHELL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      653
+    ]
   ],
   [
     "CONFIG_ARCH_HAS_WORD_GRANULAR_ACCESS_INSTR_MEM",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      654
+    ]
   ],
   [
     "CONFIG_ARCH_SUPPORTS_ROM_OFFSET",
@@ -3528,9 +3824,12 @@
     "CONFIG_EXCEPTION_DUMP_HOOK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      656
+    ]
   ],
   [
     "CONFIG_ARCH_LOG_LEVEL_OFF",
@@ -3577,11 +3876,8 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
-      5
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_ARCH_LOG_LEVEL",
@@ -3610,10 +3906,10 @@
     "y",
     "int",
     "512",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/arch/Kconfig",
-      270
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      665
     ]
   ],
   [
@@ -3621,27 +3917,33 @@
     "y",
     "hex",
     "0x24000000",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/arch/Kconfig",
-      279
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      666
     ]
   ],
   [
     "CONFIG_USERSPACE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      667
+    ]
   ],
   [
     "CONFIG_NOINIT_SNIPPET_FIRST",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      668
+    ]
   ],
   [
     "CONFIG_GEN_PRIV_STACKS",
@@ -3657,35 +3959,44 @@
     "CONFIG_STACK_GROWS_UP",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      670
+    ]
   ],
   [
     "CONFIG_FRAME_POINTER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      671
+    ]
   ],
   [
     "CONFIG_ISR_TABLES_LOCAL_DECLARATION",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      676
+    ]
   ],
   [
     "CONFIG_ARCH_DEVICE_STATE_ALIGN",
     "y",
     "int",
     "4",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/arch/Kconfig",
-      614
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      677
     ]
   ],
   [
@@ -3693,11 +4004,8 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/Users/gabe/zephyrproject/zephyr/arch/Kconfig",
-      622
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_IRQ_VECTOR_TABLE_JUMP_BY_CODE",
@@ -3712,11 +4020,8 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/Users/gabe/zephyrproject/zephyr/arch/Kconfig",
-      650
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_GEN_SW_ISR_TABLE_SWITCH",
@@ -3730,28 +4035,34 @@
     "CONFIG_SRAM_SW_ISR_TABLE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      682
+    ]
   ],
   [
     "CONFIG_EXCEPTION_DEBUG",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/arch/Kconfig",
-      732
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      683
     ]
   ],
   [
     "CONFIG_SIMPLIFIED_EXCEPTION_CODES",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      684
+    ]
   ],
   [
     "CONFIG_ARCH_MEM_DOMAIN_SUPPORTS_ISOLATED_STACKS",
@@ -4059,11 +4370,8 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
-      5
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_MPU_LOG_LEVEL",
@@ -4100,36 +4408,42 @@
     "CONFIG_CACHE_DOUBLEMAP",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      737
+    ]
   ],
   [
     "CONFIG_DCACHE_LINE_SIZE_DETECT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      738
+    ]
   ],
   [
     "CONFIG_ICACHE_LINE_SIZE_DETECT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      739
+    ]
   ],
   [
     "CONFIG_ARCH_CACHE",
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/Users/gabe/zephyrproject/zephyr/arch/Kconfig",
-      1357
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_EXTERNAL_CACHE",
@@ -4205,11 +4519,8 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
-      5
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_KERNEL_LOG_LEVEL",
@@ -4227,10 +4538,10 @@
     "y",
     "int",
     "16",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/kernel/Kconfig",
-      30
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      757
     ]
   ],
   [
@@ -4238,10 +4549,10 @@
     "y",
     "int",
     "0",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/kernel/Kconfig",
-      73
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      758
     ]
   ],
   [
@@ -4271,19 +4582,22 @@
     "y",
     "int",
     "-128",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/kernel/Kconfig",
-      86
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      761
     ]
   ],
   [
     "CONFIG_SCHED_DEADLINE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      762
+    ]
   ],
   [
     "CONFIG_THREAD_STACK_INFO",
@@ -4299,20 +4613,20 @@
     "CONFIG_THREAD_CUSTOM_DATA",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      764
+    ]
   ],
   [
     "CONFIG_SCHED_SIMPLE",
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/Users/gabe/zephyrproject/zephyr/kernel/Kconfig",
-      258
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_SCHED_SCALABLE",
@@ -4343,39 +4657,40 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/Users/gabe/zephyrproject/zephyr/kernel/Kconfig",
-      310
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_CURRENT_THREAD_USE_TLS",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/kernel/Kconfig",
-      349
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      774
     ]
   ],
   [
     "CONFIG_NONZERO_SPINLOCK_SIZE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      775
+    ]
   ],
   [
     "CONFIG_THREAD_MONITOR",
     "y",
     "bool",
     "y",
-    "imply",
+    "assign",
     [
-      "KERNEL_SHELL && SHELL"
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      781
     ]
   ],
   [
@@ -4383,9 +4698,10 @@
     "y",
     "bool",
     "y",
-    "imply",
+    "assign",
     [
-      "KERNEL_SHELL && SHELL"
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      782
     ]
   ],
   [
@@ -4393,72 +4709,87 @@
     "y",
     "int",
     "32",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/kernel/Kconfig",
-      397
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      783
     ]
   ],
   [
     "CONFIG_THREAD_RUNTIME_STATS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      784
+    ]
   ],
   [
     "CONFIG_THREAD_RUNTIME_STACK_SAFETY",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      785
+    ]
   ],
   [
     "CONFIG_OBJ_CORE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      788
+    ]
   ],
   [
     "CONFIG_WORKQUEUE_WORK_TIMEOUT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      789
+    ]
   ],
   [
     "CONFIG_SYSTEM_WORKQUEUE_PRIORITY",
     "y",
     "int",
     "-1",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/kernel/Kconfig",
-      508
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      794
     ]
   ],
   [
     "CONFIG_SYSTEM_WORKQUEUE_NO_YIELD",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      795
+    ]
   ],
   [
     "CONFIG_SYSTEM_WORKQUEUE_WORK_TIMEOUT_MS",
     "y",
     "int",
     "0",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/kernel/Kconfig",
-      526
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      796
     ]
   ],
   [
@@ -4476,10 +4807,10 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/kernel/Kconfig",
-      552
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      808
     ]
   ],
   [
@@ -4487,61 +4818,76 @@
     "y",
     "int",
     "0",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/kernel/Kconfig",
-      571
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      809
     ]
   ],
   [
     "CONFIG_TIMESLICE_PER_THREAD",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      810
+    ]
   ],
   [
     "CONFIG_TIMER_OBSERVER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      811
+    ]
   ],
   [
     "CONFIG_POLL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      817
+    ]
   ],
   [
     "CONFIG_MEM_SLAB_POINTER_VALIDATE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      818
+    ]
   ],
   [
     "CONFIG_MEM_SLAB_TRACE_MAX_UTILIZATION",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      819
+    ]
   ],
   [
     "CONFIG_NUM_MBOX_ASYNC_MSGS",
     "y",
     "int",
     "10",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/kernel/Kconfig",
-      620
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      820
     ]
   ],
   [
@@ -4559,19 +4905,22 @@
     "y",
     "int",
     "0",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/kernel/Kconfig",
-      652
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      822
     ]
   ],
   [
     "CONFIG_HEAP_MEM_POOL_IGNORE_MIN",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      823
+    ]
   ],
   [
     "CONFIG_SWAP_NONATOMIC",
@@ -4598,11 +4947,8 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/Users/gabe/zephyrproject/zephyr/kernel/Kconfig",
-      757
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_TIMEOUT_BACKEND_MINHEAP",
@@ -4633,19 +4979,22 @@
     "y",
     "int",
     "365",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/kernel/Kconfig",
-      840
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      832
     ]
   ],
   [
     "CONFIG_USE_SWITCH",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      839
+    ]
   ],
   [
     "CONFIG_USE_SWITCH_SUPPORTED",
@@ -4692,37 +5041,44 @@
     "CONFIG_DEVICE_MUTABLE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      855
+    ]
   ],
   [
     "CONFIG_DEVICE_DT_METADATA",
     "y",
     "bool",
     "y",
-    "imply",
+    "assign",
     [
-      "SHELL_DEVICE_HELPERS && SHELL"
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      856
     ]
   ],
   [
     "CONFIG_DEVICE_DEINIT_SUPPORT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      857
+    ]
   ],
   [
     "CONFIG_KERNEL_INIT_PRIORITY_OBJECTS",
     "y",
     "int",
     "30",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/kernel/Kconfig.device",
-      50
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      863
     ]
   ],
   [
@@ -4730,10 +5086,10 @@
     "y",
     "int",
     "35",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/kernel/Kconfig.device",
-      58
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      864
     ]
   ],
   [
@@ -4741,10 +5097,10 @@
     "y",
     "int",
     "40",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/kernel/Kconfig.device",
-      66
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      865
     ]
   ],
   [
@@ -4752,10 +5108,10 @@
     "y",
     "int",
     "50",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/kernel/Kconfig.device",
-      72
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      866
     ]
   ],
   [
@@ -4763,59 +5119,77 @@
     "y",
     "int",
     "90",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/kernel/Kconfig.device",
-      80
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      867
     ]
   ],
   [
     "CONFIG_SOC_EARLY_RESET_HOOK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      883
+    ]
   ],
   [
     "CONFIG_SOC_PREP_HOOK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      884
+    ]
   ],
   [
     "CONFIG_SOC_LATE_INIT_HOOK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      885
+    ]
   ],
   [
     "CONFIG_SOC_PER_CORE_INIT_HOOK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      886
+    ]
   ],
   [
     "CONFIG_BOARD_EARLY_INIT_HOOK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      887
+    ]
   ],
   [
     "CONFIG_BOARD_LATE_INIT_HOOK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      888
+    ]
   ],
   [
     "CONFIG_ADC",
@@ -4824,17 +5198,20 @@
     "y",
     "assign",
     [
-      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/prj.conf",
-      5
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      894
     ]
   ],
   [
     "CONFIG_ADC_SHELL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      895
+    ]
   ],
   [
     "CONFIG_ADC_HAS_SEQUENCE_PRIORITY",
@@ -4850,33 +5227,45 @@
     "CONFIG_ADC_SEQUENCE_PRIORITY",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      897
+    ]
   ],
   [
     "CONFIG_ADC_ASYNC",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      898
+    ]
   ],
   [
     "CONFIG_ADC_STREAM",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      899
+    ]
   ],
   [
     "CONFIG_ADC_DEFAULT_RTIO",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      900
+    ]
   ],
   [
     "CONFIG_ADC_LOG_LEVEL_OFF",
@@ -4942,59 +5331,77 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/drivers/adc/Kconfig.stm32",
-      15
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      908
     ]
   ],
   [
     "CONFIG_ADC_STM32_DMA",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      909
+    ]
   ],
   [
     "CONFIG_AUDIO",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      910
+    ]
   ],
   [
     "CONFIG_AUXDISPLAY",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      911
+    ]
   ],
   [
     "CONFIG_BBRAM",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      912
+    ]
   ],
   [
     "CONFIG_BIOMETRICS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      913
+    ]
   ],
   [
     "CONFIG_BUZZER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      914
+    ]
   ],
   [
     "CONFIG_CACHE_LOG_LEVEL_OFF",
@@ -5041,11 +5448,8 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
-      5
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_CACHE_LOG_LEVEL",
@@ -5062,25 +5466,34 @@
     "CONFIG_CACHE_NRF_PATCH_LINEADDR",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      926
+    ]
   ],
   [
     "CONFIG_CAN",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      927
+    ]
   ],
   [
     "CONFIG_CHARGER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      928
+    ]
   ],
   [
     "CONFIG_CLOCK_CONTROL_LOG_LEVEL_OFF",
@@ -5127,11 +5540,8 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
-      5
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_CLOCK_CONTROL_LOG_LEVEL",
@@ -5148,19 +5558,22 @@
     "CONFIG_CLOCK_CONTROL_FIXED_RATE_CLOCK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      936
+    ]
   ],
   [
     "CONFIG_CLOCK_CONTROL_STM32_CUBE",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/drivers/clock_control/Kconfig.stm32",
-      11
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      937
     ]
   ],
   [
@@ -5178,27 +5591,33 @@
     "CONFIG_CLOCK_MONITOR",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      939
+    ]
   ],
   [
     "CONFIG_COMPARATOR",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      940
+    ]
   ],
   [
     "CONFIG_CONSOLE_INPUT_MAX_LINE_LEN",
     "y",
     "int",
     "128",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/drivers/console/Kconfig",
-      16
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      941
     ]
   ],
   [
@@ -5215,19 +5634,22 @@
     "CONFIG_CONSOLE_HANDLER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      943
+    ]
   ],
   [
     "CONFIG_CONSOLE_INIT_PRIORITY",
     "y",
     "int",
     "60",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/drivers/console/Kconfig",
-      37
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      944
     ]
   ],
   [
@@ -5237,57 +5659,75 @@
     "y",
     "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/boards/st/nucleo_h753zi/nucleo_h753zi_defconfig",
-      14
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      945
     ]
   ],
   [
     "CONFIG_UART_CONSOLE_DEBUG_SERVER_HOOKS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      946
+    ]
   ],
   [
     "CONFIG_UART_CONSOLE_MCUMGR",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      947
+    ]
   ],
   [
     "CONFIG_RAM_CONSOLE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      948
+    ]
   ],
   [
     "CONFIG_IPM_CONSOLE_SENDER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      949
+    ]
   ],
   [
     "CONFIG_IPM_CONSOLE_RECEIVER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      950
+    ]
   ],
   [
     "CONFIG_UART_MCUMGR",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      951
+    ]
   ],
   [
     "CONFIG_UART_CONSOLE_LOG_LEVEL_OFF",
@@ -5334,11 +5774,8 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
-      5
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_UART_CONSOLE_LOG_LEVEL",
@@ -5355,33 +5792,45 @@
     "CONFIG_EFI_CONSOLE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      959
+    ]
   ],
   [
     "CONFIG_COREDUMP_DEVICE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      960
+    ]
   ],
   [
     "CONFIG_CRC_DRIVER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      961
+    ]
   ],
   [
     "CONFIG_CRYPTO",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      962
+    ]
   ],
   [
     "CONFIG_DAC",
@@ -5390,8 +5839,8 @@
     "y",
     "assign",
     [
-      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/prj.conf",
-      3
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      963
     ]
   ],
   [
@@ -5457,19 +5906,22 @@
     "CONFIG_DAC_SHELL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      971
+    ]
   ],
   [
     "CONFIG_DAC_INIT_PRIORITY",
     "y",
     "int",
     "50",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/drivers/dac/Kconfig",
-      28
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      972
     ]
   ],
   [
@@ -5479,8 +5931,8 @@
     "y",
     "assign",
     [
-      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/prj.conf",
-      4
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      973
     ]
   ],
   [
@@ -5488,142 +5940,187 @@
     "y",
     "int",
     "80",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/drivers/dac/Kconfig.dacx0508",
-      20
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      974
     ]
   ],
   [
     "CONFIG_DAI",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      975
+    ]
   ],
   [
     "CONFIG_DALI",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      976
+    ]
   ],
   [
     "CONFIG_DEBUG_DRIVER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      977
+    ]
   ],
   [
     "CONFIG_DISK_DRIVERS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      978
+    ]
   ],
   [
     "CONFIG_DISPLAY",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      979
+    ]
   ],
   [
     "CONFIG_DMA",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      980
+    ]
   ],
   [
     "CONFIG_DP_DRIVER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      981
+    ]
   ],
   [
     "CONFIG_EDAC",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      982
+    ]
   ],
   [
     "CONFIG_EEPROM",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      983
+    ]
   ],
   [
     "CONFIG_ENTROPY_GENERATOR",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      984
+    ]
   ],
   [
     "CONFIG_ESPI",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      985
+    ]
   ],
   [
     "CONFIG_MDIO",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      986
+    ]
   ],
   [
     "CONFIG_ARM_SCMI",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      991
+    ]
   ],
   [
     "CONFIG_FLASH_FILL_GENERIC_IMPLEMENTATION",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/drivers/flash/Kconfig",
-      72
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      994
     ]
   ],
   [
     "CONFIG_FPGA",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      995
+    ]
   ],
   [
     "CONFIG_FUEL_GAUGE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      996
+    ]
   ],
   [
     "CONFIG_GPIO_LOG_LEVEL_OFF",
@@ -5670,11 +6167,8 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
-      5
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_GPIO_LOG_LEVEL",
@@ -5691,102 +6185,132 @@
     "CONFIG_GPIO_SHELL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1004
+    ]
   ],
   [
     "CONFIG_GPIO_GET_DIRECTION",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1005
+    ]
   ],
   [
     "CONFIG_GPIO_GET_CONFIG",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1006
+    ]
   ],
   [
     "CONFIG_GPIO_HOGS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1007
+    ]
   ],
   [
     "CONFIG_GPIO_ENABLE_DISABLE_INTERRUPT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1008
+    ]
   ],
   [
     "CONFIG_GPIO_STM32",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/drivers/gpio/Kconfig.stm32",
-      9
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1009
     ]
   ],
   [
     "CONFIG_HAPTICS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1010
+    ]
   ],
   [
     "CONFIG_HWSPINLOCK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1011
+    ]
   ],
   [
     "CONFIG_I2C",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1012
+    ]
   ],
   [
     "CONFIG_I2S",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1013
+    ]
   ],
   [
     "CONFIG_I3C",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1014
+    ]
   ],
   [
     "CONFIG_INTC_INIT_PRIORITY",
     "y",
     "int",
     "40",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/drivers/interrupt_controller/Kconfig",
-      45
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1019
     ]
   ],
   [
@@ -5834,11 +6358,8 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
-      5
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_INTC_LOG_LEVEL",
@@ -5856,10 +6377,10 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/drivers/interrupt_controller/Kconfig.stm32",
-      11
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1027
     ]
   ],
   [
@@ -5867,115 +6388,154 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/drivers/interrupt_controller/Kconfig.stm32",
-      18
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1028
     ]
   ],
   [
     "CONFIG_IPM",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1031
+    ]
   ],
   [
     "CONFIG_LED",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1032
+    ]
   ],
   [
     "CONFIG_LED_STRIP",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1033
+    ]
   ],
   [
     "CONFIG_LORA",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1034
+    ]
   ],
   [
     "CONFIG_MBOX",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1035
+    ]
   ],
   [
     "CONFIG_MIPI_DBI",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1036
+    ]
   ],
   [
     "CONFIG_MM_DRV",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1048
+    ]
   ],
   [
     "CONFIG_MSPI",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1049
+    ]
   ],
   [
     "CONFIG_MUX",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1050
+    ]
   ],
   [
     "CONFIG_OPAMP",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1051
+    ]
   ],
   [
     "CONFIG_PCIE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1052
+    ]
   ],
   [
     "CONFIG_PCIE_ENDPOINT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1053
+    ]
   ],
   [
     "CONFIG_PECI",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1054
+    ]
   ],
   [
     "CONFIG_PINCTRL",
@@ -6034,11 +6594,8 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
-      5
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_PINCTRL_LOG_LEVEL",
@@ -6055,35 +6612,44 @@
     "CONFIG_PINCTRL_DYNAMIC",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1063
+    ]
   ],
   [
     "CONFIG_PINCTRL_MCHP_COMMON",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1064
+    ]
   ],
   [
     "CONFIG_PINCTRL_NPCX_EX",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1065
+    ]
   ],
   [
     "CONFIG_PINCTRL_STM32",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/drivers/pinctrl/Kconfig.stm32",
-      6
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1066
     ]
   ],
   [
@@ -6091,94 +6657,121 @@
     "y",
     "int",
     "2",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/drivers/pinctrl/Kconfig.stm32",
-      14
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1067
     ]
   ],
   [
     "CONFIG_PS2",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1068
+    ]
   ],
   [
     "CONFIG_PSI5",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1069
+    ]
   ],
   [
     "CONFIG_PTP_CLOCK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1070
+    ]
   ],
   [
     "CONFIG_PWM",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1071
+    ]
   ],
   [
     "CONFIG_RESET_STM32",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/drivers/reset/Kconfig.stm32",
-      6
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1076
     ]
   ],
   [
     "CONFIG_RETAINED_MEM",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1077
+    ]
   ],
   [
     "CONFIG_RTC",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1078
+    ]
   ],
   [
     "CONFIG_SDHC",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1079
+    ]
   ],
   [
     "CONFIG_SENSOR",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1080
+    ]
   ],
   [
     "CONFIG_SENT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1081
+    ]
   ],
   [
     "CONFIG_SERIAL_HAS_DRIVER",
@@ -6205,10 +6798,10 @@
     "y",
     "int",
     "50",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/drivers/serial/Kconfig",
-      36
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1088
     ]
   ],
   [
@@ -6256,11 +6849,8 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
-      5
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_UART_LOG_LEVEL",
@@ -6277,118 +6867,154 @@
     "CONFIG_UART_LINE_CTRL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1096
+    ]
   ],
   [
     "CONFIG_UART_DRV_CMD",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1097
+    ]
   ],
   [
     "CONFIG_UART_WIDE_DATA",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1098
+    ]
   ],
   [
     "CONFIG_UART_ASYNC_RX_HELPER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1099
+    ]
   ],
   [
     "CONFIG_UART_SHELL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1100
+    ]
   ],
   [
     "CONFIG_UART_NPCX_FIFO_EX",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1105
+    ]
   ],
   [
     "CONFIG_UART_STM32",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/drivers/serial/Kconfig.stm32",
-      8
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1106
     ]
   ],
   [
     "CONFIG_SMBUS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1107
+    ]
   ],
   [
     "CONFIG_SPI_SHELL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1108
+    ]
   ],
   [
     "CONFIG_SPI_ASYNC",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1109
+    ]
   ],
   [
     "CONFIG_SPI_RTIO",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1110
+    ]
   ],
   [
     "CONFIG_SPI_SLAVE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1111
+    ]
   ],
   [
     "CONFIG_SPI_EXTENDED_MODES",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1112
+    ]
   ],
   [
     "CONFIG_SPI_INIT_PRIORITY",
     "y",
     "int",
     "50",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/drivers/spi/Kconfig",
-      77
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1113
     ]
   ],
   [
@@ -6396,10 +7022,10 @@
     "y",
     "int",
     "200",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/drivers/spi/Kconfig",
-      83
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1114
     ]
   ],
   [
@@ -6447,11 +7073,8 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
-      5
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_SPI_LOG_LEVEL",
@@ -6469,27 +7092,33 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/drivers/spi/Kconfig.stm32",
-      8
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1122
     ]
   ],
   [
     "CONFIG_STEPPER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1123
+    ]
   ],
   [
     "CONFIG_TIMEAWARE_GPIO",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1124
+    ]
   ],
   [
     "CONFIG_TIMER_HAS_64BIT_CYCLE_COUNTER",
@@ -6505,19 +7134,22 @@
     "CONFIG_SYSTEM_CLOCK_SLOPPY_IDLE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1130
+    ]
   ],
   [
     "CONFIG_SYSTEM_CLOCK_INIT_PRIORITY",
     "y",
     "int",
     "0",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/drivers/timer/Kconfig",
-      55
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1131
     ]
   ],
   [
@@ -6555,43 +7187,55 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/drivers/timer/Kconfig.cortex_m_systick",
-      32
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1135
     ]
   ],
   [
     "CONFIG_CORTEX_M_SYSTICK_LPM_TIMER_NONE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1136
+    ]
   ],
   [
     "CONFIG_CORTEX_M_SYSTICK_LPM_TIMER_COUNTER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1137
+    ]
   ],
   [
     "CONFIG_CORTEX_M_SYSTICK_LPM_TIMER_HOOKS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1138
+    ]
   ],
   [
     "CONFIG_CORTEX_M_SYSTICK_RESET_BY_LPM",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1139
+    ]
   ],
   [
     "CONFIG_SYSTEM_TIMER_HAS_LPM_COMPANION_SUPPORT",
@@ -6608,144 +7252,195 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     null
   ],
   [
     "CONFIG_UAOL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1144
+    ]
   ],
   [
     "CONFIG_USB_BC12",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1145
+    ]
   ],
   [
     "CONFIG_UDC_DRIVER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1146
+    ]
   ],
   [
     "CONFIG_UHC_DRIVER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1147
+    ]
   ],
   [
     "CONFIG_UVB",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1148
+    ]
   ],
   [
     "CONFIG_USB_DEVICE_DRIVER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1149
+    ]
   ],
   [
     "CONFIG_USBC_TCPC_DRIVER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1156
+    ]
   ],
   [
     "CONFIG_USBC_VBUS_DRIVER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1157
+    ]
   ],
   [
     "CONFIG_USBC_PPC_DRIVER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1158
+    ]
   ],
   [
     "CONFIG_VIDEO_DRIVERS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1159
+    ]
   ],
   [
     "CONFIG_VIRTIO",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1160
+    ]
   ],
   [
     "CONFIG_VIRTUALIZATION",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1161
+    ]
   ],
   [
     "CONFIG_W1",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1162
+    ]
   ],
   [
     "CONFIG_TEE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1163
+    ]
   ],
   [
     "CONFIG_REQUIRES_FULL_LIBC",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1166
+    ]
   ],
   [
     "CONFIG_REQUIRES_FLOAT_PRINTF",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1167
+    ]
   ],
   [
     "CONFIG_LIBC_ALLOW_LESS_THAN_64BIT_TIME",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1168
+    ]
   ],
   [
     "CONFIG_FULL_LIBC_SUPPORTED",
@@ -6792,11 +7487,8 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/Users/gabe/zephyrproject/zephyr/lib/libc/Kconfig",
-      81
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_EXTERNAL_LIBC",
@@ -6820,17 +7512,23 @@
     "CONFIG_COMMON_LIBC_ASCTIME_R",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1180
+    ]
   ],
   [
     "CONFIG_COMMON_LIBC_CTIME_R",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1181
+    ]
   ],
   [
     "CONFIG_COMMON_LIBC_TIME",
@@ -6847,9 +7545,10 @@
     "y",
     "bool",
     "y",
-    "imply",
+    "assign",
     [
-      "PICOLIBC && PICOLIBC_SUPPORTED && <choice LIBC_IMPLEMENTATION>"
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1183
     ]
   ],
   [
@@ -6857,10 +7556,10 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/lib/libc/common/Kconfig",
-      88
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1184
     ]
   ],
   [
@@ -6868,19 +7567,22 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/lib/libc/common/Kconfig",
-      97
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1185
     ]
   ],
   [
     "CONFIG_COMMON_LIBC_REMOVE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1186
+    ]
   ],
   [
     "CONFIG_LIBC_ERRNO",
@@ -6897,10 +7599,10 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/lib/libc/common/Kconfig",
-      132
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1188
     ]
   ],
   [
@@ -6916,18 +7618,15 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/Users/gabe/zephyrproject/zephyr/lib/libc/picolibc/Kconfig",
-      8
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_PICOLIBC_IO_FLOAT",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     null
   ],
   [
@@ -6935,10 +7634,10 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/lib/libc/Kconfig",
-      173
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1192
     ]
   ],
   [
@@ -6956,87 +7655,111 @@
     "CONFIG_CPP",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1199
+    ]
   ],
   [
     "CONFIG_SYS_HASH_FUNC32",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1209
+    ]
   ],
   [
     "CONFIG_SYS_HASH_MAP",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1215
+    ]
   ],
   [
     "CONFIG_SYS_HEAP_VALIDATE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1221
+    ]
   ],
   [
     "CONFIG_SYS_HEAP_STRESS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1222
+    ]
   ],
   [
     "CONFIG_SYS_HEAP_INFO",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1223
+    ]
   ],
   [
     "CONFIG_SYS_HEAP_ALLOC_LOOPS",
     "y",
     "int",
     "3",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/lib/heap/Kconfig",
-      35
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1224
     ]
   ],
   [
     "CONFIG_SYS_HEAP_RUNTIME_STATS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1225
+    ]
   ],
   [
     "CONFIG_SYS_HEAP_ARRAY_SIZE",
     "y",
     "int",
     "0",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/lib/heap/Kconfig",
-      56
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1226
     ]
   ],
   [
     "CONFIG_SYS_HEAP_LISTENER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1227
+    ]
   ],
   [
     "CONFIG_SYS_HEAP_HARDENING_NONE",
@@ -7051,11 +7774,8 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/Users/gabe/zephyrproject/zephyr/lib/heap/Kconfig",
-      83
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_SYS_HEAP_HARDENING_MODERATE",
@@ -7096,9 +7816,12 @@
     "CONFIG_SYS_HEAP_KASAN",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1234
+    ]
   ],
   [
     "CONFIG_SYS_HEAP_LOG_LEVEL_OFF",
@@ -7145,11 +7868,8 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
-      5
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_SYS_HEAP_LOG_LEVEL",
@@ -7183,67 +7903,85 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/Users/gabe/zephyrproject/zephyr/lib/heap/Kconfig",
-      321
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_MULTI_HEAP",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1245
+    ]
   ],
   [
     "CONFIG_SHARED_MULTI_HEAP",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1246
+    ]
   ],
   [
     "CONFIG_SYS_MEM_BLOCKS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1252
+    ]
   ],
   [
     "CONFIG_MIDI2_UMP_STREAM_RESPONDER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1258
+    ]
   ],
   [
     "CONFIG_NET_BUF",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1261
+    ]
   ],
   [
     "CONFIG_ZVFS_OPEN_IGNORE_MIN",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1266
+    ]
   ],
   [
     "CONFIG_PRINTK_SYNC",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1267
+    ]
   ],
   [
     "CONFIG_MPSC_PBUF",
@@ -7260,35 +7998,44 @@
     "CONFIG_SPSC_PBUF",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1269
+    ]
   ],
   [
     "CONFIG_MPSC_CLEAR_ALLOCATED",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1270
+    ]
   ],
   [
     "CONFIG_RESET_ON_FATAL_ERROR",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1271
+    ]
   ],
   [
     "CONFIG_BOOT_BANNER",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/lib/os/Kconfig",
-      154
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1272
     ]
   ],
   [
@@ -7296,10 +8043,10 @@
     "y",
     "string",
     "Booting Zephyr OS build",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/lib/os/Kconfig",
-      162
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1273
     ]
   ],
   [
@@ -7307,27 +8054,33 @@
     "y",
     "int",
     "0",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/lib/os/Kconfig",
-      169
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1274
     ]
   ],
   [
     "CONFIG_BOOT_CLEAR_SCREEN",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1275
+    ]
   ],
   [
     "CONFIG_BOOTARGS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1276
+    ]
   ],
   [
     "CONFIG_ATOMIC_OPERATIONS_BUILTIN",
@@ -7344,11 +8097,8 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/Users/gabe/zephyrproject/zephyr/lib/os/Kconfig.cbprintf",
-      6
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_CBPRINTF_NANO",
@@ -7363,11 +8113,8 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/Users/gabe/zephyrproject/zephyr/lib/os/Kconfig.cbprintf",
-      29
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_CBPRINTF_REDUCED_INTEGRAL",
@@ -7384,25 +8131,31 @@
     "y",
     "assign",
     [
-      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/prj.conf",
-      10
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1288
     ]
   ],
   [
     "CONFIG_CBPRINTF_FP_A_SUPPORT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1289
+    ]
   ],
   [
     "CONFIG_CBPRINTF_LIBC_SUBSTS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1290
+    ]
   ],
   [
     "CONFIG_CBPRINTF_PACKAGE_LOG_LEVEL_OFF",
@@ -7449,11 +8202,8 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
-      5
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_CBPRINTF_PACKAGE_LOG_LEVEL",
@@ -7470,9 +8220,12 @@
     "CONFIG_CBPRINTF_PACKAGE_LONGDOUBLE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1298
+    ]
   ],
   [
     "CONFIG_CBPRINTF_CONVERT_CHECK_PTR",
@@ -7489,52 +8242,64 @@
     "CONFIG_ZVFS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1300
+    ]
   ],
   [
     "CONFIG_CPU_LOAD",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1301
+    ]
   ],
   [
     "CONFIG_CPU_LOAD_METRIC",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1302
+    ]
   ],
   [
     "CONFIG_SMF",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1305
+    ]
   ],
   [
     "CONFIG_LIBGCC_RTLIB",
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/Users/gabe/zephyrproject/zephyr/lib/runtime/Kconfig",
-      13
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_JSON_LIBRARY",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1311
+    ]
   ],
   [
     "CONFIG_RING_BUFFER",
@@ -7551,49 +8316,67 @@
     "CONFIG_RING_BUFFER_LARGE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1313
+    ]
   ],
   [
     "CONFIG_NOTIFY",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1314
+    ]
   ],
   [
     "CONFIG_BASE64",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1315
+    ]
   ],
   [
     "CONFIG_ONOFF",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1316
+    ]
   ],
   [
     "CONFIG_UTF8",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1317
+    ]
   ],
   [
     "CONFIG_COBS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1318
+    ]
   ],
   [
     "CONFIG_GETOPT",
@@ -7610,132 +8393,177 @@
     "CONFIG_GETOPT_LONG",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1320
+    ]
   ],
   [
     "CONFIG_TIMEUTIL_APPLY_SKEW",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/lib/utils/Kconfig",
-      118
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1321
     ]
   ],
   [
     "CONFIG_UUID",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1324
+    ]
   ],
   [
     "CONFIG_WORD_GRANULAR_ACCESS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1325
+    ]
   ],
   [
     "CONFIG_MIN_HEAP",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1326
+    ]
   ],
   [
     "CONFIG_FIDO2",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1336
+    ]
   ],
   [
     "CONFIG_BINDESC",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1339
+    ]
   ],
   [
     "CONFIG_CONSOLE_SUBSYS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1346
+    ]
   ],
   [
     "CONFIG_CPU_FREQ",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1347
+    ]
   ],
   [
     "CONFIG_CRC",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1348
+    ]
   ],
   [
     "CONFIG_DAP",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1349
+    ]
   ],
   [
     "CONFIG_THREAD_ANALYZER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1354
+    ]
   ],
   [
     "CONFIG_DEBUG",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1360
+    ]
   ],
   [
     "CONFIG_UBSAN",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1361
+    ]
   ],
   [
     "CONFIG_STACK_USAGE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1362
+    ]
   ],
   [
     "CONFIG_CALLGRAPH_INFO",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1363
+    ]
   ],
   [
     "CONFIG_PRINTK",
@@ -7752,240 +8580,318 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/debug/Kconfig",
-      173
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1365
     ]
   ],
   [
     "CONFIG_FORCE_NO_ASSERT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1366
+    ]
   ],
   [
     "CONFIG_ASSERT_VERBOSE",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/debug/Kconfig",
-      249
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1367
     ]
   ],
   [
     "CONFIG_ASSERT_NO_FILE_INFO",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1368
+    ]
   ],
   [
     "CONFIG_ASSERT_NO_COND_INFO",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1369
+    ]
   ],
   [
     "CONFIG_ASSERT_NO_MSG_INFO",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1370
+    ]
   ],
   [
     "CONFIG_ASSERT_TEST",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1371
+    ]
   ],
   [
     "CONFIG_OVERRIDE_FRAME_POINTER_DEFAULT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1372
+    ]
   ],
   [
     "CONFIG_DEBUG_THREAD_INFO",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1373
+    ]
   ],
   [
     "CONFIG_DEBUG_COREDUMP",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1374
+    ]
   ],
   [
     "CONFIG_SYMTAB",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1375
+    ]
   ],
   [
     "CONFIG_MIPI_STP_DECODER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1378
+    ]
   ],
   [
     "CONFIG_CS_TRACE_DEFMT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1379
+    ]
   ],
   [
     "CONFIG_DISK_ACCESS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1380
+    ]
   ],
   [
     "CONFIG_DSP",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1381
+    ]
   ],
   [
     "CONFIG_EMUL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1382
+    ]
   ],
   [
     "CONFIG_CHARACTER_FRAMEBUFFER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1383
+    ]
   ],
   [
     "CONFIG_FILE_SYSTEM_LIB_LINK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1388
+    ]
   ],
   [
     "CONFIG_FILE_SYSTEM",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1389
+    ]
   ],
   [
     "CONFIG_GNSS_RTK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1392
+    ]
   ],
   [
     "CONFIG_INSTRUMENTATION",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1393
+    ]
   ],
   [
     "CONFIG_RPMSG_SERVICE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1398
+    ]
   ],
   [
     "CONFIG_IPC_SERVICE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1399
+    ]
   ],
   [
     "CONFIG_OPENAMP_RSC_TABLE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1400
+    ]
   ],
   [
     "CONFIG_JWT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1403
+    ]
   ],
   [
     "CONFIG_ZMS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1408
+    ]
   ],
   [
     "CONFIG_LLEXT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1411
+    ]
   ],
   [
     "CONFIG_LLEXT_EDK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1412
+    ]
   ],
   [
     "CONFIG_LOG_CORE_INIT_PRIORITY",
     "y",
     "int",
     "0",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig",
-      18
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1417
     ]
   ],
   [
@@ -7993,11 +8899,8 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig.mode",
-      9
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_LOG_MODE_IMMEDIATE",
@@ -8019,43 +8922,55 @@
     "CONFIG_LOG_FRONTEND",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1421
+    ]
   ],
   [
     "CONFIG_LOG_FRONTEND_OPT_API",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1422
+    ]
   ],
   [
     "CONFIG_LOG_CUSTOM_HEADER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1423
+    ]
   ],
   [
     "CONFIG_LOG_MULTIDOMAIN",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1424
+    ]
   ],
   [
     "CONFIG_LOG_FLUSH_SLEEP_US",
     "y",
     "int",
     "10000",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig.mode",
-      84
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1425
     ]
   ],
   [
@@ -8063,9 +8978,10 @@
     "y",
     "bool",
     "y",
-    "imply",
+    "assign",
     [
-      "SHELL"
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1430
     ]
   ],
   [
@@ -8073,10 +8989,10 @@
     "y",
     "int",
     "3",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig.filtering",
-      17
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1431
     ]
   ],
   [
@@ -8084,10 +9000,10 @@
     "y",
     "int",
     "3",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig.filtering",
-      39
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1432
     ]
   ],
   [
@@ -8095,10 +9011,10 @@
     "y",
     "int",
     "0",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig.filtering",
-      54
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1433
     ]
   ],
   [
@@ -8106,10 +9022,10 @@
     "y",
     "int",
     "4",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig.filtering",
-      71
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1434
     ]
   ],
   [
@@ -8117,48 +9033,54 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig.processing",
-      10
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1440
     ]
   ],
   [
     "CONFIG_LOG_PRINTK_STATIC",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1441
+    ]
   ],
   [
     "CONFIG_LOG_MODE_OVERFLOW",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig.processing",
-      23
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1442
     ]
   ],
   [
     "CONFIG_LOG_BLOCK_IN_THREAD",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1443
+    ]
   ],
   [
     "CONFIG_LOG_PROCESS_TRIGGER_THRESHOLD",
     "y",
     "int",
     "10",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig.processing",
-      48
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1444
     ]
   ],
   [
@@ -8166,10 +9088,10 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig.processing",
-      59
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1445
     ]
   ],
   [
@@ -8177,10 +9099,10 @@
     "y",
     "int",
     "0",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig.processing",
-      70
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1446
     ]
   ],
   [
@@ -8188,29 +9110,32 @@
     "y",
     "int",
     "1000",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig.processing",
-      77
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1447
     ]
   ],
   [
     "CONFIG_LOG_PROCESS_THREAD_CUSTOM_PRIORITY",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1448
+    ]
   ],
   [
     "CONFIG_LOG_BUFFER_SIZE",
     "y",
     "int",
     "1024",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig.processing",
-      127
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1449
     ]
   ],
   [
@@ -8218,112 +9143,142 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig.processing",
-      156
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1450
     ]
   ],
   [
     "CONFIG_LOG_TIMESTAMP_64BIT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1451
+    ]
   ],
   [
     "CONFIG_LOG_TIMESTAMP_USE_REALTIME",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1452
+    ]
   ],
   [
     "CONFIG_LOG_SPEED",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1453
+    ]
   ],
   [
     "CONFIG_LOG_FUNC_NAME_PREFIX_ERR",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1463
+    ]
   ],
   [
     "CONFIG_LOG_FUNC_NAME_PREFIX_WRN",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1464
+    ]
   ],
   [
     "CONFIG_LOG_FUNC_NAME_PREFIX_INF",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1465
+    ]
   ],
   [
     "CONFIG_LOG_FUNC_NAME_PREFIX_DBG",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig.formatting",
-      20
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1466
     ]
   ],
   [
     "CONFIG_LOG_MIPI_SYST_ENABLE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1469
+    ]
   ],
   [
     "CONFIG_LOG_DOMAIN_NAME_PREFIX",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1470
+    ]
   ],
   [
     "CONFIG_LOG_THREAD_ID_PREFIX",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1471
+    ]
   ],
   [
     "CONFIG_LOG_CUSTOM_FORMAT_SUPPORT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1472
+    ]
   ],
   [
     "CONFIG_LOG_BACKEND_SHOW_TIMESTAMP",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig.formatting",
-      150
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1473
     ]
   ],
   [
@@ -8331,10 +9286,10 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig.formatting",
-      156
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1474
     ]
   ],
   [
@@ -8342,37 +9297,43 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig.formatting",
-      163
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1475
     ]
   ],
   [
     "CONFIG_LOG_INFO_COLOR_GREEN",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1476
+    ]
   ],
   [
     "CONFIG_LOG_DBG_COLOR_BLUE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1477
+    ]
   ],
   [
     "CONFIG_LOG_TAG_MAX_LEN",
     "y",
     "int",
     "0",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig.formatting",
-      179
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1478
     ]
   ],
   [
@@ -8390,10 +9351,10 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig.formatting",
-      200
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1480
     ]
   ],
   [
@@ -8401,11 +9362,8 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig.formatting",
-      207
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_LOG_OUTPUT_FORMAT_DATE_TIMESTAMP",
@@ -8443,33 +9401,45 @@
     "CONFIG_LOG_BACKEND_CRLF_NONE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1486
+    ]
   ],
   [
     "CONFIG_LOG_BACKEND_CRLF_LFONLY",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1487
+    ]
   ],
   [
     "CONFIG_LOG_BACKEND_SKIP_SOURCE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1488
+    ]
   ],
   [
     "CONFIG_LOG_BACKEND_SWO",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1494
+    ]
   ],
   [
     "CONFIG_LOG_BACKEND_UART",
@@ -8478,8 +9448,8 @@
     "y",
     "assign",
     [
-      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/prj.conf",
-      9
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1495
     ]
   ],
   [
@@ -8487,10 +9457,10 @@
     "y",
     "int",
     "1",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/backends/Kconfig.uart",
-      22
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1496
     ]
   ],
   [
@@ -8498,10 +9468,10 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/backends/Kconfig.uart",
-      33
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1497
     ]
   ],
   [
@@ -8509,11 +9479,8 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_format_config",
-      6
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_LOG_BACKEND_UART_OUTPUT_DICTIONARY",
@@ -8546,27 +9513,33 @@
     "CONFIG_LOG_BACKEND_IPC_SERVICE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1502
+    ]
   ],
   [
     "CONFIG_LOG_CMDS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1508
+    ]
   ],
   [
     "CONFIG_LOG_USE_VLA",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig.misc",
-      21
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1509
     ]
   ],
   [
@@ -8574,53 +9547,65 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig.misc",
-      31
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1510
     ]
   ],
   [
     "CONFIG_LOG_ALWAYS_RUNTIME",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1511
+    ]
   ],
   [
     "CONFIG_LOG_FMT_SECTION",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1512
+    ]
   ],
   [
     "CONFIG_LOG_FMT_STRING_VALIDATE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1513
+    ]
   ],
   [
     "CONFIG_LOG_MEM_UTILIZATION",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1514
+    ]
   ],
   [
     "CONFIG_LOG_FAILURE_REPORT_PERIOD",
     "y",
     "int",
     "1000",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig.misc",
-      115
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1515
     ]
   ],
   [
@@ -8628,10 +9613,10 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig",
-      54
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1518
     ]
   ],
   [
@@ -8639,10 +9624,10 @@
     "y",
     "int",
     "5000",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig",
-      65
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1519
     ]
   ],
   [
@@ -8661,99 +9646,132 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/mem_mgmt/Kconfig",
-      8
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1523
     ]
   ],
   [
     "CONFIG_MEM_ATTR_HEAP",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1524
+    ]
   ],
   [
     "CONFIG_EC_HOST_CMD",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1533
+    ]
   ],
   [
     "CONFIG_OSDP",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1536
+    ]
   ],
   [
     "CONFIG_MODBUS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1539
+    ]
   ],
   [
     "CONFIG_MODEM_MODULES",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1540
+    ]
   ],
   [
     "CONFIG_NETWORKING",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1545
+    ]
   ],
   [
     "CONFIG_PM_POLICY_LATENCY_STANDALONE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1551
+    ]
   ],
   [
     "CONFIG_PM_CPU_SHELL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1552
+    ]
   ],
   [
     "CONFIG_MCTP",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1558
+    ]
   ],
   [
     "CONFIG_POSIX_SYSTEM_INTERFACES",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1568
+    ]
   ],
   [
     "CONFIG_POSIX_API",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1569
+    ]
   ],
   [
     "CONFIG_POSIX_AEP_CHOICE_NONE",
@@ -8768,11 +9786,8 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/Users/gabe/zephyrproject/zephyr/subsys/portability/posix/Kconfig.profile",
-      29
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_POSIX_AEP_CHOICE_BASE",
@@ -8841,35 +9856,44 @@
     "CONFIG_EVENTFD",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1586
+    ]
   ],
   [
     "CONFIG_PROFILING",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1589
+    ]
   ],
   [
     "CONFIG_TEST_RANDOM_GENERATOR",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1594
+    ]
   ],
   [
     "CONFIG_TIMER_RANDOM_INITIAL_STATE",
     "y",
     "int",
     "123456789",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/random/Kconfig",
-      33
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1595
     ]
   ],
   [
@@ -8887,57 +9911,78 @@
     "CONFIG_CSPRNG_NEEDED",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1597
+    ]
   ],
   [
     "CONFIG_RTIO",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1600
+    ]
   ],
   [
     "CONFIG_MMC_STACK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1605
+    ]
   ],
   [
     "CONFIG_SDMMC_STACK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1606
+    ]
   ],
   [
     "CONFIG_SDIO_STACK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1607
+    ]
   ],
   [
     "CONFIG_SECURE_STORAGE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1610
+    ]
   ],
   [
     "CONFIG_SETTINGS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1611
+    ]
   ],
   [
     "CONFIG_SHELL",
@@ -8946,8 +9991,8 @@
     "y",
     "assign",
     [
-      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/prj.conf",
-      15
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1612
     ]
   ],
   [
@@ -8995,11 +10040,8 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/Users/gabe/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
-      5
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_SHELL_LOG_LEVEL",
@@ -9017,10 +10059,10 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/backends/Kconfig.backends",
-      8
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1620
     ]
   ],
   [
@@ -9028,10 +10070,10 @@
     "y",
     "int",
     "90",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/backends/Kconfig.backends",
-      29
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1621
     ]
   ],
   [
@@ -9039,10 +10081,10 @@
     "y",
     "string",
     "uart:~$ ",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/backends/Kconfig.backends",
-      37
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1622
     ]
   ],
   [
@@ -9050,10 +10092,10 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/backends/Kconfig.backends",
-      44
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1623
     ]
   ],
   [
@@ -9069,29 +10111,29 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/backends/Kconfig.backends",
-      57
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_SHELL_BACKEND_SERIAL_FORCE_TX_BLOCKING_MODE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1626
+    ]
   ],
   [
     "CONFIG_SHELL_BACKEND_SERIAL_TX_RING_BUFFER_SIZE",
     "y",
     "int",
     "8",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/backends/Kconfig.backends",
-      83
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1627
     ]
   ],
   [
@@ -9099,10 +10141,10 @@
     "y",
     "int",
     "64",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/backends/Kconfig.backends",
-      93
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1628
     ]
   ],
   [
@@ -9110,10 +10152,10 @@
     "y",
     "int",
     "100",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/Kconfig.template.shell_log_queue_timeout",
-      5
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1629
     ]
   ],
   [
@@ -9121,10 +10163,10 @@
     "y",
     "int",
     "512",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/Kconfig.template.shell_log_queue_size",
-      5
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1630
     ]
   ],
   [
@@ -9132,11 +10174,8 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/backends/Kconfig.backends",
-      162
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_SHELL_BACKEND_SERIAL_LOG_LEVEL_DBG",
@@ -9193,9 +10232,12 @@
     "CONFIG_SHELL_BACKEND_DUMMY",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1638
+    ]
   ],
   [
     "CONFIG_SHELL_LOCAL",
@@ -9212,38 +10254,44 @@
     "CONFIG_SHELL_MINIMAL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1640
+    ]
   ],
   [
     "CONFIG_SHELL_DEVICE_HELPERS",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/Kconfig",
-      38
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1641
     ]
   ],
   [
     "CONFIG_SHELL_THREAD_PRIORITY_OVERRIDE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1642
+    ]
   ],
   [
     "CONFIG_SHELL_BACKSPACE_MODE_DELETE",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/Kconfig",
-      65
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1643
     ]
   ],
   [
@@ -9251,10 +10299,10 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/Kconfig",
-      73
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1644
     ]
   ],
   [
@@ -9262,10 +10310,10 @@
     "y",
     "int",
     "20",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/Kconfig",
-      84
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1645
     ]
   ],
   [
@@ -9273,10 +10321,10 @@
     "y",
     "int",
     "256",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/Kconfig",
-      92
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1646
     ]
   ],
   [
@@ -9284,10 +10332,10 @@
     "y",
     "int",
     "30",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/Kconfig",
-      99
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1647
     ]
   ],
   [
@@ -9295,10 +10343,10 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/Kconfig",
-      107
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1648
     ]
   ],
   [
@@ -9306,10 +10354,10 @@
     "y",
     "int",
     "80",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/Kconfig",
-      115
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1649
     ]
   ],
   [
@@ -9317,10 +10365,10 @@
     "y",
     "int",
     "24",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/Kconfig",
-      121
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1650
     ]
   ],
   [
@@ -9328,10 +10376,10 @@
     "y",
     "int",
     "20",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/Kconfig",
-      128
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1651
     ]
   ],
   [
@@ -9339,10 +10387,10 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/Kconfig",
-      134
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1652
     ]
   ],
   [
@@ -9350,10 +10398,10 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/Kconfig",
-      143
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1653
     ]
   ],
   [
@@ -9361,10 +10409,10 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/Kconfig",
-      150
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1654
     ]
   ],
   [
@@ -9372,10 +10420,10 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/Kconfig",
-      159
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1655
     ]
   ],
   [
@@ -9383,10 +10431,10 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/Kconfig",
-      165
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1656
     ]
   ],
   [
@@ -9394,10 +10442,10 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/Kconfig",
-      171
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1657
     ]
   ],
   [
@@ -9405,29 +10453,32 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/Kconfig",
-      177
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1658
     ]
   ],
   [
     "CONFIG_SHELL_START_OBSCURED",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1659
+    ]
   ],
   [
     "CONFIG_SHELL_VT100_COMMANDS",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/Kconfig",
-      189
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1660
     ]
   ],
   [
@@ -9435,29 +10486,32 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/Kconfig",
-      196
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1661
     ]
   ],
   [
     "CONFIG_SHELL_GETOPT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1662
+    ]
   ],
   [
     "CONFIG_SHELL_METAKEYS",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/Kconfig",
-      211
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1663
     ]
   ],
   [
@@ -9465,10 +10519,10 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/Kconfig",
-      219
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1664
     ]
   ],
   [
@@ -9476,10 +10530,10 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/Kconfig",
-      227
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1665
     ]
   ],
   [
@@ -9487,10 +10541,10 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/Kconfig",
-      236
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1666
     ]
   ],
   [
@@ -9498,10 +10552,10 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/Kconfig",
-      240
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1667
     ]
   ],
   [
@@ -9509,10 +10563,10 @@
     "y",
     "int",
     "512",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/Kconfig",
-      248
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1668
     ]
   ],
   [
@@ -9520,10 +10574,10 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/Kconfig",
-      255
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1669
     ]
   ],
   [
@@ -9531,10 +10585,10 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/Kconfig",
-      259
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1670
     ]
   ],
   [
@@ -9542,56 +10596,65 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/Kconfig",
-      268
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1671
     ]
   ],
   [
     "CONFIG_SHELL_CMDS_SELECT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1672
+    ]
   ],
   [
     "CONFIG_SHELL_CMD_ROOT",
     "y",
     "string",
-    null,
-    "unset",
-    null
+    "",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1673
+    ]
   ],
   [
     "CONFIG_SHELL_LOG_BACKEND",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/Kconfig",
-      293
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1674
     ]
   ],
   [
     "CONFIG_SHELL_LOG_BACKEND_CUSTOM",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1675
+    ]
   ],
   [
     "CONFIG_SHELL_LOG_OUTPUT_TIMESTAMP",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/Kconfig",
-      313
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1676
     ]
   ],
   [
@@ -9599,10 +10662,10 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/Kconfig",
-      319
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1677
     ]
   ],
   [
@@ -9610,56 +10673,65 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/Kconfig",
-      325
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1678
     ]
   ],
   [
     "CONFIG_SHELL_LOG_OUTPUT_CRLF_NONE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1679
+    ]
   ],
   [
     "CONFIG_SHELL_LOG_OUTPUT_CRLF_LFONLY",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1680
+    ]
   ],
   [
     "CONFIG_SHELL_LOG_OUTPUT_THREAD",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/Kconfig",
-      341
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1681
     ]
   ],
   [
     "CONFIG_SHELL_LOG_OUTPUT_SKIP_SOURCE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1682
+    ]
   ],
   [
     "CONFIG_SHELL_AUTOSTART",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/Kconfig",
-      354
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1683
     ]
   ],
   [
@@ -9667,29 +10739,32 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/Kconfig",
-      361
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1684
     ]
   ],
   [
     "CONFIG_SHELL_CUSTOM_HEADER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1685
+    ]
   ],
   [
     "CONFIG_SHELL_TX_TIMEOUT_MS",
     "y",
     "int",
     "500",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/Kconfig",
-      377
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1686
     ]
   ],
   [
@@ -9697,10 +10772,10 @@
     "y",
     "int",
     "16",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/Kconfig",
-      389
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1687
     ]
   ],
   [
@@ -9708,29 +10783,32 @@
     "y",
     "int",
     "100",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/Kconfig",
-      437
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1688
     ]
   ],
   [
     "CONFIG_SHELL_ALIASES",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1689
+    ]
   ],
   [
     "CONFIG_DEVICE_SHELL",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/modules/Kconfig",
-      8
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1690
     ]
   ],
   [
@@ -9738,10 +10816,10 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/modules/Kconfig",
-      15
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1691
     ]
   ],
   [
@@ -9749,10 +10827,10 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/modules/Kconfig",
-      25
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1692
     ]
   ],
   [
@@ -9760,29 +10838,32 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/modules/Kconfig",
-      31
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1693
     ]
   ],
   [
     "CONFIG_ZYCLICTEST_SHELL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1694
+    ]
   ],
   [
     "CONFIG_KERNEL_SHELL",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/shell/modules/kernel_service/Kconfig",
-      8
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1695
     ]
   ],
   [
@@ -9858,172 +10939,232 @@
     "CONFIG_KERNEL_SHELL_PANIC_CMD",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1702
+    ]
   ],
   [
     "CONFIG_STATS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1703
+    ]
   ],
   [
     "CONFIG_STREAM_FLASH",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1708
+    ]
   ],
   [
     "CONFIG_TASK_WDT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1711
+    ]
   ],
   [
     "CONFIG_ZTEST",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1716
+    ]
   ],
   [
     "CONFIG_ZTEST_MOCKING",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1717
+    ]
   ],
   [
     "CONFIG_ZTRESS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1718
+    ]
   ],
   [
     "CONFIG_ZTEST_BENCHMARK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1723
+    ]
   ],
   [
     "CONFIG_TEST",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1726
+    ]
   ],
   [
     "CONFIG_TEST_USERSPACE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1727
+    ]
   ],
   [
     "CONFIG_FORCE_COVERAGE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1733
+    ]
   ],
   [
     "CONFIG_COVERAGE_DUMP_PATH_EXCLUDE",
     "y",
     "string",
     "",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/subsys/testsuite/Kconfig.coverage",
-      96
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1734
     ]
   ],
   [
     "CONFIG_TIMING_FUNCTIONS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1737
+    ]
   ],
   [
     "CONFIG_TRACING",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1738
+    ]
   ],
   [
     "CONFIG_USB_DEVICE_STACK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1739
+    ]
   ],
   [
     "CONFIG_USB_DEVICE_STACK_NEXT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1740
+    ]
   ],
   [
     "CONFIG_USB_HOST_STACK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1741
+    ]
   ],
   [
     "CONFIG_USBC_STACK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1742
+    ]
   ],
   [
     "CONFIG_VIDEO",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1743
+    ]
   ],
   [
     "CONFIG_ZBUS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1744
+    ]
   ],
   [
     "CONFIG_MODULES",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1745
+    ]
   ],
   [
     "CONFIG_TOOLCHAIN_ZEPHYR_1_0",
@@ -10082,11 +11223,8 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/Users/gabe/zephyrproject/zephyr/Kconfig.zephyr",
-      62
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_LINKER_ORPHAN_SECTION_ERROR",
@@ -10101,10 +11239,10 @@
     "y",
     "hex",
     "0",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/Kconfig.zephyr",
-      148
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1763
     ]
   ],
   [
@@ -10112,10 +11250,10 @@
     "y",
     "hex",
     "0",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/Kconfig.zephyr",
-      178
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1764
     ]
   ],
   [
@@ -10134,11 +11272,8 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/Users/gabe/zephyrproject/zephyr/Kconfig.zephyr",
-      193
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_CMAKE_LINKER_GENERATOR",
@@ -10152,38 +11287,44 @@
     "CONFIG_HAVE_CUSTOM_LINKER_SCRIPT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1768
+    ]
   ],
   [
     "CONFIG_LINKER_SORT_BY_ALIGNMENT",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/Kconfig.zephyr",
-      243
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1769
     ]
   ],
   [
     "CONFIG_LINKER_USE_BOOT_SECTION",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1774
+    ]
   ],
   [
     "CONFIG_LINKER_LAST_SECTION_ID",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/Kconfig.zephyr",
-      291
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1775
     ]
   ],
   [
@@ -10191,10 +11332,10 @@
     "y",
     "hex",
     "0xE015E015",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/Kconfig.zephyr",
-      307
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1776
     ]
   ],
   [
@@ -10223,9 +11364,12 @@
     "CONFIG_LINKER_DEVNULL_MEMORY",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1781
+    ]
   ],
   [
     "CONFIG_STD_C90",
@@ -10256,11 +11400,8 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/Users/gabe/zephyrproject/zephyr/Kconfig.zephyr",
-      390
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_STD_C23",
@@ -10284,36 +11425,42 @@
     "CONFIG_GNU_C_EXTENSIONS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1793
+    ]
   ],
   [
     "CONFIG_CODING_GUIDELINE_CHECK",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1794
+    ]
   ],
   [
     "CONFIG_COMPILER_FREESTANDING",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1795
+    ]
   ],
   [
     "CONFIG_SIZE_OPTIMIZATIONS",
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/Users/gabe/zephyrproject/zephyr/Kconfig.zephyr",
-      491
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_SIZE_OPTIMIZATIONS_AGGRESSIVE",
@@ -10351,35 +11498,44 @@
     "CONFIG_COMPILER_WARNINGS_AS_ERRORS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1801
+    ]
   ],
   [
     "CONFIG_DEPRECATION_TEST",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1802
+    ]
   ],
   [
     "CONFIG_COMPILER_SAVE_TEMPS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1803
+    ]
   ],
   [
     "CONFIG_COMPILER_TRACK_MACRO_EXPANSION",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/Kconfig.zephyr",
-      568
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1804
     ]
   ],
   [
@@ -10387,10 +11543,10 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/Kconfig.zephyr",
-      576
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1805
     ]
   ],
   [
@@ -10406,11 +11562,8 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/Users/gabe/zephyrproject/zephyr/Kconfig.zephyr",
-      583
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_FORTIFY_SOURCE_RUN_TIME",
@@ -10424,17 +11577,23 @@
     "CONFIG_COMPILER_OPT",
     "y",
     "string",
-    null,
-    "unset",
-    null
+    "",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1809
+    ]
   ],
   [
     "CONFIG_MISRA_SANE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1810
+    ]
   ],
   [
     "CONFIG_TOOLCHAIN_SUPPORTS_VLA_IN_STATEMENTS",
@@ -10462,20 +11621,20 @@
     "CONFIG_SCOPE_CLEANUP_HELPERS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1813
+    ]
   ],
   [
     "CONFIG_COMPILER_CODEGEN_VLIW_AUTO",
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/Users/gabe/zephyrproject/zephyr/Kconfig.zephyr",
-      655
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_COMPILER_CODEGEN_VLIW_ENABLED",
@@ -10514,21 +11673,18 @@
     "y",
     "bool",
     "y",
-    "default",
-    [
-      "/Users/gabe/zephyrproject/zephyr/Kconfig.zephyr",
-      686
-    ]
+    "assign",
+    null
   ],
   [
     "CONFIG_KERNEL_BIN_NAME",
     "y",
     "string",
     "zephyr",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/Kconfig.zephyr",
-      710
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1831
     ]
   ],
   [
@@ -10536,152 +11692,197 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/Kconfig.zephyr",
-      716
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1832
     ]
   ],
   [
     "CONFIG_OUTPUT_SYMBOLS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1833
+    ]
   ],
   [
     "CONFIG_OUTPUT_PRINT_MEMORY_USAGE",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/Kconfig.zephyr",
-      758
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1834
     ]
   ],
   [
     "CONFIG_CLEANUP_INTERMEDIATE_FILES",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1835
+    ]
   ],
   [
     "CONFIG_BUILD_NO_GAP_FILL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1836
+    ]
   ],
   [
     "CONFIG_BUILD_OUTPUT_HEX_GAP_FILL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1837
+    ]
   ],
   [
     "CONFIG_BUILD_OUTPUT_EXE",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1838
+    ]
   ],
   [
     "CONFIG_BUILD_OUTPUT_S19_GAP_FILL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1839
+    ]
   ],
   [
     "CONFIG_BUILD_OUTPUT_VERILOG",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1840
+    ]
   ],
   [
     "CONFIG_BUILD_OUTPUT_UF2",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1841
+    ]
   ],
   [
     "CONFIG_BUILD_OUTPUT_MOT",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1842
+    ]
   ],
   [
     "CONFIG_BUILD_OUTPUT_STRIPPED",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1843
+    ]
   ],
   [
     "CONFIG_BUILD_OUTPUT_COMPRESS_DEBUG_SECTIONS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1844
+    ]
   ],
   [
     "CONFIG_BUILD_ALIGN_LMA",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1845
+    ]
   ],
   [
     "CONFIG_APPLICATION_DEFINED_SYSCALL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1846
+    ]
   ],
   [
     "CONFIG_MAKEFILE_EXPORTS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1847
+    ]
   ],
   [
     "CONFIG_BUILD_OUTPUT_META",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1848
+    ]
   ],
   [
     "CONFIG_BUILD_OUTPUT_STRIP_PATHS",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/Kconfig.zephyr",
-      1014
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1849
     ]
   ],
   [
@@ -10689,72 +11890,87 @@
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/Kconfig.zephyr",
-      1028
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1850
     ]
   ],
   [
     "CONFIG_EMIT_ALL_SYSCALLS",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1851
+    ]
   ],
   [
     "CONFIG_WARN_DEPRECATED",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/Kconfig.zephyr",
-      1060
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1854
     ]
   ],
   [
     "CONFIG_WARN_EXPERIMENTAL",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1855
+    ]
   ],
   [
     "CONFIG_ENFORCE_ZEPHYR_STDINT",
     "y",
     "bool",
     "y",
-    "default",
+    "assign",
     [
-      "/Users/gabe/zephyrproject/zephyr/Kconfig.zephyr",
-      1096
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1856
     ]
   ],
   [
     "CONFIG_IS_BOOTLOADER",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1862
+    ]
   ],
   [
     "CONFIG_BOOTLOADER_BOSSA",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1863
+    ]
   ],
   [
     "CONFIG_LEGACY_GENERATED_INCLUDE_PATH",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "n",
+    "assign",
+    [
+      "/Users/gabe/Documents/projects/nucleo_actuator_hat_zephyr/build/zephyr/.config",
+      1869
+    ]
   ]
 ]

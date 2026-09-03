@@ -611,8 +611,8 @@
 			interrupts = < 0x27 0x0 >;                     /* in zephyr/dts/arm/st/h7/stm32h7.dtsi:374 */
 			pinctrl-0 = < &usart3_tx_pd8 &usart3_rx_pd9 >; /* in zephyr/boards/st/nucleo_h753zi/nucleo_h753zi.dts:128 */
 			pinctrl-names = "default";                     /* in zephyr/boards/st/nucleo_h753zi/nucleo_h753zi.dts:129 */
-			current-speed = < 0x1c200 >;                   /* in zephyr/boards/st/nucleo_h753zi/nucleo_h753zi.dts:130 */
 			status = "okay";                               /* in zephyr/boards/st/nucleo_h753zi/nucleo_h753zi.dts:131 */
+			current-speed = < 0xe1000 >;                   /* in ../Documents/projects/nucleo_actuator_hat_zephyr/boards/nucleo_h753zi.overlay:46 */
 		};
 
 		/* node '/soc/serial@40004c00' defined in zephyr/dts/arm/st/h7/stm32h7.dtsi:378 */

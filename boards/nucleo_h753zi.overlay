@@ -41,3 +41,7 @@
 		channel7-gain = <DACX0508_CHANNEL_GAIN_2>;
 	};
 };
+
+&usart3 {
+	current-speed = <921600>;
+};

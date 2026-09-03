@@ -101,3 +101,8 @@ DerivedData/
 # Playgrounds
 timeline.xctimeline
 playground.xcworkspace
+
+# FRA Test Data
+fra_tests/
+*.csv
+*.png

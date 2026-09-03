@@ -6470,5 +6470,9 @@ zephyr_udc0: &usbotg_fs {
   channel7-gain = <0x01>;
  };
 };
+
+&usart3 {
+ current-speed = <921600>;
+};
 # 0 "<command-line>" 2
 # 1 "/Users/gabe/zephyrproject/zephyr/misc/empty_file.c"
